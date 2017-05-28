@@ -18,6 +18,11 @@ a:link, a:visited, a:hover, a:active {
   color: #1b8669;
 }
 
+img.janusgraph {
+  border: 0;
+  box-shadow: none;
+}
+
 img.logo {
   border: 0;
   box-shadow: none;
