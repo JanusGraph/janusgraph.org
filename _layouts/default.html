@@ -5,11 +5,11 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+    <meta name="description" content="JanusGraph: Distributed graph database">
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-    <title>{{ site.title | default: site.github.repository_name }}</title>
+    <title>{{ page.title | default: "JanusGraph: Distributed graph database" }}</title>
   </head>
 
   <body>
@@ -17,17 +17,8 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-
           <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
         </header>
     </div>
 
@@ -41,10 +32,20 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        <p class="copyright">
+          <p>Copyright © 2017 JanusGraph Authors. All rights reserved.</p>
+
+          <p>The Linux Foundation has registered trademarks and uses trademarks. For
+          a list of trademarks of The Linux Foundation, please see our <a
+          href="https://www.linuxfoundation.org/trademark-usage">Trademark
+          Usage</a> page.</p>
+
+          <p>Apache®, Apache Hadoop, Hadoop®, Apache Spark, Apache Giraph,
+          Apache Solr, Apache TinkerPop, and Apache Lucene® are either
+          registered trademarks or trademarks of the <a
+          href="https://www.apache.org">Apache Software Foundation</a> in the
+          United States and/or other countries.</p>
+        </p>
       </footer>
     </div>
 

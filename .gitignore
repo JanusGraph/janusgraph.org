@@ -1,0 +1,8 @@
+# Bundler-installed Ruby Gems
+.bundle
+
+# Generated CSS from SASS templates (*.scss)
+.sass-cache
+
+# Generated site when testing locally
+_site
