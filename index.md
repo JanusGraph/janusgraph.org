@@ -57,7 +57,7 @@ Follow the [Getting Started with JanusGraph](http://docs.janusgraph.org/latest/g
 
 JanusGraph is a project under [The Linux
 Foundation](https://www.linux.com/blog/Linux-Foundation-welcomes-JanusGraph),
-and includes participants from Expero, Google, GRAKN.AI, Hortonworks, and IBM.
+and includes participants from Expero, Google, GRAKN.AI, Hortonworks, IBM and Amazon.
 
 ## <a name="users"></a>Users
 
