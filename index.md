@@ -65,4 +65,5 @@ The following users have deployed JanusGraph in production.
 
 <a href="https://www.celum.com/en/graph-driven-and-reactive-architecture" class="logo"><img src="images/logos/celum.png" alt="celum" class="logo" style="width: 150px"></a>
 <a href="https://finc.com" class="logo"><img src="images/logos/finc.png" alt="FiNC" class="logo"></a>
+<a href="https://gdatasoftware.com" class="logo"><img src="images/logos/gdata.png" alt="G DATA" class="logo" style="width: 100px"></a>
 <a href="https://seeq.com" class="logo"><img src="images/logos/seeq.png" alt="Seeq" class="logo"></a>
