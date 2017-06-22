@@ -29,7 +29,7 @@ In addition, JanusGraph provides the following features:
   * [Apache HBase®](http://hbase.apache.org)
   * [Google Cloud Bigtable](https://cloud.google.com/bigtable)
   * [Oracle BerkeleyDB](http://www.oracle.com/technetwork/database/berkeleydb/overview/index-093405.html)
-* Support for global [graph data analytics](http://tinkerpop.apache.org/docs/3.1.1-SNAPSHOT/reference/#graphcomputer), reporting, and ETL through integration with big data
+* Support for global [graph data analytics](http://tinkerpop.apache.org/docs/3.2.4/reference/#graphcomputer), reporting, and ETL through integration with big data
   platforms:
   * [Apache Spark™](http://spark.apache.org)
   * [Apache Giraph™](http://giraph.apache.org)
@@ -39,9 +39,9 @@ In addition, JanusGraph provides the following features:
   * [Apache Solr™](http://lucene.apache.org/solr)
   * [Apache Lucene®](http://lucene.apache.org)
 * Native integration with the [Apache TinkerPop™](http://tinkerpop.apache.org) graph stack:
-  * [Gremlin graph query language](http://tinkerpop.apache.org/docs/3.1.1-SNAPSHOT/reference/#traversal)
-  * [Gremlin graph server](http://tinkerpop.apache.org/docs/3.1.1-SNAPSHOT/reference/#gremlin-server)
-  * [Gremlin applications](http://tinkerpop.apache.org/docs/3.1.1-SNAPSHOT/reference/#gremlin-applications)
+  * [Gremlin graph query language](http://tinkerpop.apache.org/docs/3.2.4/reference/#traversal)
+  * [Gremlin graph server](http://tinkerpop.apache.org/docs/3.2.4/reference/#gremlin-server)
+  * [Gremlin applications](http://tinkerpop.apache.org/docs/3.2.4/reference/#gremlin-applications)
 * Open source under the [Apache 2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
 
 You can [download](https://github.com/JanusGraph/janusgraph/releases) JanusGraph
