@@ -1,5 +1,10 @@
 # janusgraph.org
 
+[![Website][website-shield]][website-link]
+
+[website-shield]: https://img.shields.io/website-up-down-green-red/http/janusgraph.org.svg?label=janusgraph.org
+[website-link]: http://janusgraph.org
+
 This repo generates the content served on http://janusgraph.org
 
 To make changes, you should install the local setup and once you're ready to
