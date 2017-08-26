@@ -59,10 +59,12 @@ JanusGraph is a project under [The Linux
 Foundation](https://www.linux.com/blog/Linux-Foundation-welcomes-JanusGraph),
 and includes participants from Expero, Google, GRAKN.AI, Hortonworks, and IBM.
 
-## <a name="presentations"></a>Presentations
-Here is a selection of Janusgraph presentations:
-* <a href="https://www.slideshare.net/ptgoetz/large-scale-graph-analytics-with-janusgraph">DataWorksJun2017: Large Scale Graph Analytics with JanusGraph</a>, P. Taylor Goetz, 2017.06.13
-* <a href="https://www.slideshare.net/HBaseCon/communitydriven-graphs-with-janusgraph-77117443">HBaseCon2017 Community-Driven Graphs with JanusGraph</a>Jing Chen He & Jason Plurad, 2017.06.12
+## Presentations
+Here is a selection of JanusGraph presentations:
+
+* [DataWorksJun2017: Large Scale Graph Analytics with JanusGraph](https://www.slideshare.net/ptgoetz/large-scale-graph-analytics-with-janusgraph), P. Taylor Goetz, 2017.06.13
+
+* [HBaseCon2017 Community-Driven Graphs with JanusGraph](https://www.slideshare.net/HBaseCon/communitydriven-graphs-with-janusgraph-77117443), Jing Chen He & Jason Plurad, 2017.06.12
 
 ## <a name="users"></a>Users
 
