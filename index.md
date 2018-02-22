@@ -81,4 +81,5 @@ The following users have deployed JanusGraph in production.
 <a href="https://www.compose.com/databases/janusgraph" class="logo"><img src="images/logos/compose.png" alt="Compose" class="logo"></a>
 <a href="https://finc.com" class="logo"><img src="images/logos/finc.png" alt="FiNC" class="logo"></a>
 <a href="https://gdatasoftware.com" class="logo"><img src="images/logos/gdata.png" alt="G DATA" class="logo" style="width: 100px"></a>
+<a href="https://linkurio.us/solution/janusgraph" class="logo"><img src="images/logos/linkurious.png" alt="Linkurious" class="logo"></a>
 <a href="https://seeq.com" class="logo"><img src="images/logos/seeq.png" alt="Seeq" class="logo"></a>
