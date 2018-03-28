@@ -33,7 +33,7 @@ preview changes that we make using a local setup.
    ```
 
 1. Visit http://localhost:4000/ to see the site. Now, any changes you make to
-   `index.md` or any dependent files will be instantly previwable in your browser
+   `index.md` or any dependent files will be instantly previewable in your browser
    with a refresh.
 
 ## Preview via GitHub
