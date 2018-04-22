@@ -12,8 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+VERB = @
+ifeq ($(VERBOSE),1)
+	VERB =
+endif
+
+.PHONY default:
+	$(VERB) echo "Available targets: install, serve"
+
 install:
-	bundle install --path .bundle
+	$(VERB) bundle install --path .bundle
 
 serve:
-	bundle exec jekyll serve
+	$(VERB) bundle exec jekyll serve
