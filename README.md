@@ -42,30 +42,115 @@ Before pushing the site to production, and a great way to demonstrate proposed
 changes during code review, you should push the changes to your personal GitHub
 fork as follows:
 
-1. fork the main repo https://github.com/JanusGraph/janusgraph.org to your
-   account
+1. [Fork the website repo](https://github.com/JanusGraph/janusgraph.org#fork-destination-box)
+   to your account via GitHub
    * note: the `master` branch of this repo is the one that is auto-published to
      http://janusgraph.org soon after a commit
-1. clone your copy of the repo locally
-1. checkout the `gh-pages` branch or create it if it doesn't exist
-1. make changes on that branch and push `gh-pages` to your fork on GitHub
-1. visit the "Settings" page for your fork on GitHub and make the `gh-pages`
+
+1. Clone your copy of the repo locally
+
+   ```
+   $ git clone git@github.com:[USERNAME]/janusgraph.org.git
+   $ cd janusgraph.org
+   $ git remote add upstream git@github.com:JanusGraph/janusgraph.org.git
+   ```
+
+1. Create a new branch for your changes, based on the latest changes in the
+   `master` branch of the upstream repo:
+
+   ```
+   $ git checkout master
+   $ git pull upstream master --ff-only
+   $ git checkout -b [MY-BRANCH-NAME]
+   ```
+
+   > Note: the `--ff-only` flag enforces a "fast-forward" only merge, which
+   > guarantees that your `master` branch is a clean copy of the upstream
+   > `master` branch. If your `master` branch cannot be fast-forwarded to match
+   > the upstream `master`, this command will fail. It is recommended to never
+   > submit your `master` branch as a base of a pull request and only keep it to
+   > sync with upstream.
+   >
+   > This process ensures that your pull requests are always minimal and simple
+   > to review. This approach is also recommended when contributing to other git
+   > repos as well.
+
+   Always create a new branch for each new pull request; never push from your
+   own `master` branch to a new PR, keep a clean `master` branch so that it
+   stays in sync with upstream.
+
+   Note: `[MY-BRANCH-NAME]` here is a placeholder for a brand-new branch name
+   that does not yet exist in your repo; the command above will create this new
+   branch for you.
+
+1. Make the changes you need and commit them to this branch.
+
+1. Push your feature branch to the `gh-pages` branch on your fork on GitHub, so
+   that everyone will be able to see a preview of your change:
+
+   ```
+   $ git push -f origin [MY-BRANCH-NAME]:gh-pages
+   ```
+
+   Note: `[MY-BRANCH-NAME]` is the placeholder for the same branch name as
+   selected above; this branch must exist at the time of running the above
+   command.
+
+1. Visit the "Settings" page for your fork on GitHub and make the `gh-pages`
    auto-publishable
    * note: after you make this change, you will get an email that you could not
      publish this site because the CNAME of janusgraph.org is already taken by
      another site (i.e., the canonical repo). You will also see a warning about
      this on the GitHub UI. Both of these warnings are safe to ignore because we
      are trying to create a personal test copy, not update the live site.
-1. now you can visit your site at
-   `http://[your-username].github.io/janusgraph.org/` to see your changes
-1. any changes you continue to push to your `gh-pages` branch will keep updating
-   live on GitHub
 
-Note: you can also use `master` on your fork the same way, since GitHub allows
-you to auto-publish either `master` or `gh-pages`, but in the interest of always
-having a clean `master` branch that you can create PRs from, that also tracks
-the `master` from upstream (i.e., https://github.com/JanusGraph/janusgraph.org),
-it is highly recommended to use `gh-pages` for this purpose instead.
+1. Now you can visit your site at
+   `http://[your-username].github.io/janusgraph.org/` to see your changes
+
+1. Now you can push your `[MY-BRANCH-NAME]` to your fork to open a pull request
+   using it.
+
+   **Important:** do not use either `gh-pages` or `master` branch to submit pull
+   requests; use a separate feature branch for every change and every pull
+   request, and delete each of those branches after the pull request is either
+   merged or abandoned.
+
+1. Any changes you continue to push to your `gh-pages` branch will keep updating
+   live on GitHub after a few minutes
+
+   Note: you will get warning emails from GitHub saying that your repo is
+   attempting to publish to the URL `janusgraph.org` which is already taken.
+   This is fine; you can ignore these emails — it is saying that you cannot
+   publish directly to that hostname from your private repo, which is correct.
+
+## Update your feature branch to include upstream changes
+
+1. First, update your `master` branch and pick up the latest changes, run:
+
+   ```
+   $ git checkout master
+   $ git pull upstream master --ff-only
+   ```
+
+   > Note: the `--ff-only` flag enforces a "fast-forward" only merge, which
+   > guarantees that your `master` branch is a clean copy of the upstream
+   > `master` branch. If your `master` branch cannot be fast-forwarded to match
+   > the upstream `master`, this command will fail. It is recommended to never
+   > submit your `master` branch as a base of a pull request and only keep it to
+   > sync with upstream.
+   >
+   > This process ensures that your pull requests are always minimal and simple
+   > to review. This approach is also recommended when contributing to other git
+   > repos as well.
+
+1. Then, update your feature branch via `git rebase` to avoid including other
+   users' changes into your branch, which makes CLA verification harder:
+
+   ```
+   $ git checkout [MY-FEATURE-BRANCH]
+   $ git rebase master
+   $ git push -f origin
+   ```
 
 ## License
 
