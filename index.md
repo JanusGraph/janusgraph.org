@@ -81,5 +81,4 @@ The following users have deployed JanusGraph in production.
 <a href="https://www.compose.com/databases/janusgraph" class="logo"><img src="images/logos/compose.png" alt="Compose" class="logo"></a>
 <a href="https://finc.com" class="logo"><img src="images/logos/finc.png" alt="FiNC" class="logo"></a>
 <a href="https://gdatasoftware.com" class="logo"><img src="images/logos/gdata.png" alt="G DATA" class="logo" style="width: 100px"></a>
-<a href="https://seeq.com" class="logo"><img src="images/logos/seeq.png" alt="Seeq" class="logo"></a>
 <a href="http://denmarkblog.timesinternet.in/blogs/graph/times-internet-is-using-janusgraph-as-main-database-in-cms-for-all-newsrooms/articleshow/63709837.cms" class="logo"><img src="images/logos/timesinternet.png" alt="Times Internet" class="logo" style="width: 250px"></a>
