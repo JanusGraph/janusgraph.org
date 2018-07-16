@@ -20,6 +20,13 @@ endif
 .PHONY default:
 	$(VERB) echo "Available targets: install, serve"
 
+# Pushes the current branch, provided via $(git rev-parse ...) to the `gh-pages`
+# branch on your repo. Assumes this branch is set to display a preview via
+# GitHub pages, as recommended in the instructions on the git repo:
+# https://github.com/janusgraph/janusgraph.org/#preview-via-github
+preview-via-github:
+	git push -f origin $$(git rev-parse --abbrev-ref HEAD):gh-pages
+
 install:
 	$(VERB) bundle install --path .bundle
 
