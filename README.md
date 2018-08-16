@@ -96,6 +96,22 @@ fork as follows:
    selected above; this branch must exist at the time of running the above
    command.
 
+   To simplify this process, you can also run:
+
+   ```
+   $ make preview-via-github
+   ```
+
+   which actually runs the following command:
+
+   ```
+   $ git push -f origin $$(git rev-parse --abbrev-ref HEAD):gh-pages
+
+   ```
+
+   which automatically discovers the current branch you're on and pushes that
+   to GitHub, using the `gh-pages` branch.
+
 1. Visit the "Settings" page for your fork on GitHub and make the `gh-pages`
    auto-publishable
    * note: after you make this change, you will get an email that you could not
