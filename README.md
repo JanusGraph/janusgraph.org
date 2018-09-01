@@ -105,8 +105,7 @@ fork as follows:
    which actually runs the following command:
 
    ```
-   $ git push -f origin $$(git rev-parse --abbrev-ref HEAD):gh-pages
-
+   $ git push -f origin $(git rev-parse --abbrev-ref HEAD):gh-pages
    ```
 
    which automatically discovers the current branch you're on and pushes that
