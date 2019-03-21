@@ -63,7 +63,7 @@ Follow the [Getting Started with JanusGraph](http://docs.janusgraph.org/latest/g
 ## <a name="about"></a>About
 
 JanusGraph is a project under [The Linux
-Foundation](https://www.linux.com/blog/Linux-Foundation-welcomes-JanusGraph),
+Foundation](https://www.linuxfoundation.org/blog/2017/01/the-linux-foundation-welcomes-janusgraph/),
 and includes participants from Expero, Google, GRAKN.AI, Hortonworks, IBM and Amazon.
 
 ## Presentations
