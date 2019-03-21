@@ -4,7 +4,7 @@ title: "JanusGraph: Distributed graph database"
 ---
 
 <center>
-  <a href="http://docs.janusgraph.org/latest/">Docs</a> &bull;
+  <a href="https://docs.janusgraph.org/latest/">Docs</a> &bull;
   <a href="https://github.com/JanusGraph/janusgraph/">GitHub</a> &bull;
   <a href="https://github.com/JanusGraph/janusgraph/releases/">Download</a><br />
   <img class="janusgraph" src="images/janusgraph.png" />
@@ -54,11 +54,11 @@ In addition, JanusGraph provides the following features:
 You can [download](https://github.com/JanusGraph/janusgraph/releases) JanusGraph
 or [clone](https://github.com/JanusGraph/janusgraph) from GitHub.
 
-Read the [JanusGraph documentation](http://docs.janusgraph.org/latest) and join the
+Read the [JanusGraph documentation](https://docs.janusgraph.org/latest) and join the
 [users](https://groups.google.com/group/janusgraph-users) or
 [developers](https://groups.google.com/group/janusgraph-dev) mailing lists.
 
-Follow the [Getting Started with JanusGraph](http://docs.janusgraph.org/latest/getting-started.html) guide for a step-by-step introduction.
+Follow the [Getting Started with JanusGraph](https://docs.janusgraph.org/latest/getting-started.html) guide for a step-by-step introduction.
 
 ## <a name="about"></a>About
 

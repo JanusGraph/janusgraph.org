@@ -3,9 +3,9 @@
 [![Website][website-shield]][website-link]
 
 [website-shield]: https://img.shields.io/website-up-down-green-red/http/janusgraph.org.svg?label=janusgraph.org
-[website-link]: http://janusgraph.org
+[website-link]: https://janusgraph.org
 
-This repo generates the content served on http://janusgraph.org
+This repo generates the content served on https://janusgraph.org
 
 To make changes, you should install the local setup and once you're ready to
 submit changes, please provide a pointer to a previewable version via your
@@ -45,7 +45,7 @@ fork as follows:
 1. [Fork the website repo](https://github.com/JanusGraph/janusgraph.org#fork-destination-box)
    to your account via GitHub
    * note: the `master` branch of this repo is the one that is auto-published to
-     http://janusgraph.org soon after a commit
+     https://janusgraph.org soon after a commit
 
 1. Clone your copy of the repo locally
 
@@ -120,7 +120,7 @@ fork as follows:
      are trying to create a personal test copy, not update the live site.
 
 1. Now you can visit your site at
-   `http://[your-username].github.io/janusgraph.org/` to see your changes
+   `https://[your-username].github.io/janusgraph.org/` to see your changes
 
 1. Now you can push your `[MY-BRANCH-NAME]` to your fork to open a pull request
    using it.
