@@ -2,7 +2,7 @@
 
 [![Website][website-shield]][website-link]
 
-[website-shield]: https://img.shields.io/website-up-down-green-red/http/janusgraph.org.svg?label=janusgraph.org
+[website-shield]: https://img.shields.io/website-up-down-green-red/https/janusgraph.org.svg?label=janusgraph.org
 [website-link]: https://janusgraph.org
 
 This repo generates the content served on https://janusgraph.org
