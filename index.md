@@ -66,6 +66,13 @@ JanusGraph is a project under [The Linux
 Foundation](https://www.linux.com/blog/Linux-Foundation-welcomes-JanusGraph),
 and includes participants from Expero, Google, GRAKN.AI, Hortonworks, IBM and Amazon.
 
+## Upcoming Events
+Get involved and learn more about the JanusGraph project and community at the following upcoming events:
+
+* [JanusGraph Online Meetup](https://training.experoinc.com/janus-meetup-march27/) - March 27, 2019
+
+* [Global Graph Summit 2020](https://datadaytexas.com/2020-graph-summit/news) - January 5, 2020 
+
 ## Presentations
 Here is a selection of JanusGraph presentations:
 
