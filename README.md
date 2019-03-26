@@ -18,7 +18,7 @@ making changes and seeing how they work via Jekyll—you don't want to wait for 
 `git push` + GitHub build cycle before seeing any changes. Thus, we want to
 preview changes that we make using a local setup.
 
-1. Install Ruby and [Bundler](http://bundler.io)
+1. Install Ruby and [Bundler](https://bundler.io)
 
 1. Install the necessary Ruby Gems for this repo into `.bundle`:
 
