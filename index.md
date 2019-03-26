@@ -11,7 +11,7 @@ title: "JanusGraph: Distributed graph database"
 </center>
 
 JanusGraph is a scalable [graph
-database](http://en.wikipedia.org/wiki/Graph_database) optimized for storing and
+database](https://en.wikipedia.org/wiki/Graph_database) optimized for storing and
 querying graphs containing hundreds of billions of vertices and edges
 distributed across a multi-machine cluster. JanusGraph is a transactional
 database that can support thousands of concurrent users executing complex graph
@@ -22,30 +22,30 @@ In addition, JanusGraph provides the following features:
 * Elastic and linear scalability for a growing data and user base.
 * Data distribution and replication for performance and fault tolerance.
 * Multi-datacenter high availability and hot backups.
-* Support for [ACID](http://en.wikipedia.org/wiki/ACID) and
-  [eventual consistency](http://en.wikipedia.org/wiki/Eventual_consistency).
+* Support for [ACID](https://en.wikipedia.org/wiki/ACID) and
+  [eventual consistency](https://en.wikipedia.org/wiki/Eventual_consistency).
 * Support for various storage backends:
-  * [Apache Cassandra®](http://cassandra.apache.org)
-  * [Apache HBase®](http://hbase.apache.org)
+  * [Apache Cassandra®](https://cassandra.apache.org)
+  * [Apache HBase®](https://hbase.apache.org)
   * [Google Cloud Bigtable](https://cloud.google.com/bigtable)
-  * [Oracle BerkeleyDB](http://www.oracle.com/technetwork/database/berkeleydb/overview/index-093405.html)
-* Support for global [graph data analytics](http://tinkerpop.apache.org/docs/3.2.4/reference/#graphcomputer), reporting, and ETL through integration with big data
+  * [Oracle BerkeleyDB](https://www.oracle.com/technetwork/database/berkeleydb/overview/index-093405.html)
+* Support for global [graph data analytics](https://tinkerpop.apache.org/docs/3.2.4/reference/#graphcomputer), reporting, and ETL through integration with big data
   platforms:
-  * [Apache Spark™](http://spark.apache.org)
-  * [Apache Giraph™](http://giraph.apache.org)
-  * [Apache Hadoop®](http://hadoop.apache.org)
+  * [Apache Spark™](https://spark.apache.org)
+  * [Apache Giraph™](https://giraph.apache.org)
+  * [Apache Hadoop®](https://hadoop.apache.org)
 * Support for geo, numeric range, and full-text search via:
   * [ElasticSearch™](http://www.elasticsearch.org)
-  * [Apache Solr™](http://lucene.apache.org/solr)
-  * [Apache Lucene®](http://lucene.apache.org)
-* Native integration with the [Apache TinkerPop™](http://tinkerpop.apache.org) graph stack:
-  * [Gremlin graph query language](http://tinkerpop.apache.org/docs/3.2.4/reference/#traversal)
-  * [Gremlin graph server](http://tinkerpop.apache.org/docs/3.2.4/reference/#gremlin-server)
-  * [Gremlin applications](http://tinkerpop.apache.org/docs/3.2.4/reference/#gremlin-applications)
-* Open source under the [Apache 2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
+  * [Apache Solr™](https://lucene.apache.org/solr)
+  * [Apache Lucene®](https://lucene.apache.org)
+* Native integration with the [Apache TinkerPop™](https://tinkerpop.apache.org) graph stack:
+  * [Gremlin graph query language](https://tinkerpop.apache.org/docs/3.2.4/reference/#traversal)
+  * [Gremlin graph server](https://tinkerpop.apache.org/docs/3.2.4/reference/#gremlin-server)
+  * [Gremlin applications](https://tinkerpop.apache.org/docs/3.2.4/reference/#gremlin-applications)
+* Open source under the [Apache 2](https://www.apache.org/licenses/LICENSE-2.0.html) license.
 * You can visualize graphs stored in JanusGraph via any of the following tools:
   * [Cytoscape](http://www.cytoscape.org/)
-  * [Gephi](http://tinkerpop.apache.org/docs/current/reference/#gephi-plugin)
+  * [Gephi](https://tinkerpop.apache.org/docs/current/reference/#gephi-plugin)
     plugin for Apache TinkerPop
   * [Graphexp](https://github.com/bricaud/graphexp)
   * [KeyLines by Cambridge Intelligence](https://cambridge-intelligence.com/visualizing-janusgraph-new-titandb-fork/)
