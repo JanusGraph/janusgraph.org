@@ -69,12 +69,12 @@ and includes participants from Expero, Google, GRAKN.AI, Hortonworks, IBM and Am
 ## Upcoming Events
 Get involved and learn more about the JanusGraph project and community at the following upcoming events:
 
-* [JanusGraph Online Meetup](https://training.experoinc.com/janus-meetup-march27/) - March 27, 2019
-
 * [Global Graph Summit 2020](https://datadaytexas.com/2020-graph-summit/news) - January 5, 2020 
 
 ## Presentations
 Here is a selection of JanusGraph presentations:
+
+* [JanusGraph Online Meetup](https://training.experoinc.com/janus-meetup-march27/), Chris Hupman, Ryan Stauffer, Jan Jansen, John Mertic, & Ted Wilmes - 2019.03.27
 
 * [DataWorksJun2017: Large Scale Graph Analytics with JanusGraph](https://www.slideshare.net/ptgoetz/large-scale-graph-analytics-with-janusgraph), P. Taylor Goetz, 2017.06.13
 
