@@ -1,0 +1,50 @@
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <p class="footer-info">Join our <a href="https://groups.google.com/forum/#!forum/janusgraph-users">community channels</a> for troubleshooting help or questions about installation, configuration, and usage of JanusGraph.</p>
+                        <p class="footer-info">Join <a href="https://groups.google.com/forum/#!forum/gremlin-users">Gremlin users group</a> for questions regarding the Gremlin graph traversal language in general.</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.social }}</h3>
+                        <ul class="list-inline">
+                            {% for network in site.social %}
+                            <li>
+                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="{{ network.icon }}"></i></a>
+                            </li>
+		                    {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <a href="https://docs.janusgraph.org/latest" class="btn-footer btn btn-lg btn-outline">
+                            <i class="fas fa-book"></i>&nbsp; See Documentation
+                        </a>
+                        <p class="footer-small-info">For discussion on internal implementation details of JanusGraph or proposing a major new feature or subproject use the <a href="https://groups.google.com/forum/#!forum/janusgraph-dev">JanusGraph dev group</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; 2017-20{{ site.time | date: '%y' }} JanusGraph Authors. All rights reserved.<br>
+                        <a href="https://www.linuxfoundation.org">The Linux Foundation</a> has registered trademarks and uses trademarks.
+                        For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage">Trademark Usage</a> page.<br>
+                        Apache®, Apache Hadoop, Hadoop®, Apache Spark, Apache Giraph, Apache Solr, Apache TinkerPop,
+                        and Apache Lucene® are either registered trademarks or trademarks of the
+                        <a href="https://www.apache.org">Apache Software Foundation</a> in the United States and/or other countries.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a id="page-top-button" class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>

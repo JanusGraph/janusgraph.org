@@ -1,63 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <meta name="description" content="JanusGraph: Distributed graph database">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
-    <title>{{ page.title | default: "JanusGraph: Distributed graph database" }}</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">
-          <p>Copyright © 2017 JanusGraph Authors. All rights reserved.</p>
-
-          <p>The Linux Foundation has registered trademarks and uses trademarks. For
-          a list of trademarks of The Linux Foundation, please see our <a
-          href="https://www.linuxfoundation.org/trademark-usage">Trademark
-          Usage</a> page.</p>
-
-          <p>Apache®, Apache Hadoop, Hadoop®, Apache Spark, Apache Giraph,
-          Apache Solr, Apache TinkerPop, and Apache Lucene® are either
-          registered trademarks or trademarks of the <a
-          href="https://www.apache.org">Apache Software Foundation</a> in the
-          United States and/or other countries.</p>
-        </p>
-      </footer>
-    </div>
-
-    {% if site.google_analytics %}
-      <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-      </script>
-    {% endif %}
-  </body>
+    {% include head.html %}
+    <body id="page-top" class="index">
+    {% include nav.html %}
+    {% include header.html %}
+    {% include about.html %}
+    {% include features.html %}
+    {% include upcoming-features.html %}
+    {% include presentations.html %}
+    {% include users.html %}
+    {% include footer.html %}
+    {% include js.html %}
+    </body>
 </html>

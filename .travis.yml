@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+- 2.3.3
+
+install: gem update --system; gem install bundler jekyll; bundle install;
+script: jekyll build
+
+sudo: false
+exclude: [vendor]

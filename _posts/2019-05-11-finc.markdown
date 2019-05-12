@@ -1,0 +1,7 @@
+---
+layout: default
+href: https://finc.com
+img: finc.png
+alt: FiNC
+
+---

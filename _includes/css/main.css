@@ -1,0 +1,655 @@
+/*!
+ * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 20px;
+}
+
+p.small {
+    font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+    color: #{{ site.color.primary }};
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+    color: #{{ site.color.hover-on-primary }} !important;
+}
+
+footer a,
+footer a:hover,
+footer a:focus,
+footer a:active,
+footer a.active {
+    color: #{{ site.color.footer-links }};
+}
+
+.feature-link {
+    color: #{{ site.color.feature-links }};
+}
+
+a.feature-link,
+a.feature-link:hover,
+a.feature-link:focus,
+a.feature-link:active,
+a.feature-link.active {
+    outline: 0;
+    color: #{{ site.color.feature-links }};
+}
+
+.second-title {
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin-right: 30px;
+}
+
+hr.title-line {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+    overflow: visible;
+}
+
+hr.title-line:after {
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: "Font Awesome 5 Free";
+    font-size: 2em;
+    font-weight: 900;
+}
+
+hr.users:after {
+    content: '\f0c0';
+}
+
+hr.calendar:after {
+    content: '\f073';
+}
+
+hr.check-calendar:after {
+    content: '\f274';
+}
+
+hr.users:after {
+    content: '\f0c0';
+}
+
+hr.star-light {
+    border-color: #fff;
+}
+
+hr.star-light:after {
+    color: #fff;
+    background-color: #{{ site.color.primary }};
+}
+
+hr.title-line {
+    border-color: #{{ site.color.secondary }};
+}
+
+hr.title-line:after {
+    color: #{{ site.color.secondary }};
+    background-color: #fff;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.users-intro {
+    font-size: 24px;
+}
+
+.users {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 24px;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background: #{{ site.color.primary-content-backgraund }};
+}
+
+header .container {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .intro-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+    color: #{{ site.color.secondary }};
+}
+
+.footer-info {
+    font-size: 16px;
+}
+
+.footer-small-info {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.portfolio .portfolio-item.feature-item {
+    height: 226px;
+}
+
+.navbar {
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.navbar a:focus {
+    outline: 0;
+}
+
+.navbar .navbar-nav {
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-nav li a:focus {
+    outline: 0;
+}
+
+.navbar-default,
+.navbar-inverse {
+    border: 0;
+}
+
+.nav-github {
+    padding: 16px 0px 10px 10px;
+}
+
+section {
+    padding: 30px 0 0 0;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+section.success {
+    color: #fff;
+    background: #{{ site.color.primary }};
+}
+
+.portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+    text-align: center;
+    height: 200px;
+}
+
+.portfolio .portfolio-item .portfolio-link {
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio .portfolio-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #{{ site.color.users-hover-border }};
+    background: rgba({{ site.color.users-hover-rgb }},.1);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+.portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+    margin: 0;
+}
+
+.portfolio * {
+    z-index: 2;
+}
+
+.btn-outline {
+    border: solid 2px #{{ site.color.button-border }};
+    font-size: 20px;
+    color: #{{ site.color.button-text }};
+    background: 0 0;
+    transition: all .3s ease-in-out;
+    margin: 15px 40px 5px 15px;
+    height: 66px;
+    width: 270px;
+}
+
+footer .btn-outline {
+    margin: 0px 15px 5px 15px;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+    border: solid 2px #{{ site.color.button-border-hover }};
+    color: #{{ site.color.button-text-hover }};
+    background: #fff;
+}
+
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #eee;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.floating-label-form-group::not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid #eee;
+}
+
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: #{{ site.color.primary }};
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #eee;
+}
+
+footer {
+    color: #fff;
+}
+
+footer h3 {
+    margin-bottom: 30px;
+}
+
+footer .footer-above {
+    padding-top: 50px;
+    background-color: #{{ site.color.footer-above }};
+}
+
+footer .footer-col {
+    margin-bottom: 50px;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    text-align: left;
+    background-color: #{{ site.color.footer-below }};
+}
+
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #{{ site.color.social-border }};
+    color: #{{ site.color.social }};
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.btn-social:focus,
+.btn-social:active,
+.btn-social:hover {
+    border-color: #{{ site.color.social-border-hover }};
+    color: #{{ site.color.social-hover }};
+    background-color: #{{ site.color.social-backgraund-hover }};
+}
+
+.btn-footer {
+    color: #{{ site.color.footer-button }};
+    border-color: #{{ site.color.footer-button-border }};
+}
+
+.btn-footer:focus,
+.btn-footer:active,
+.btn-footer:hover {
+    border-color: #{{ site.color.footer-button-border-hover }};
+    color: #{{ site.color.footer-button-hover }};
+    background-color: #{{ site.color.footer-button-backgraund-hover }};
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: 0;
+}
+
+.scroll-top {
+    z-index: 1049;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+}
+
+.scroll-top .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.scroll-top .btn:focus {
+    outline: 0;
+}
+
+.navbar {
+    background-color: #{{ site.color.primary }};
+}
+
+.navbar-nav>.active>a {
+    background-color: #{{ site.color.primary-dark }} !important;
+}
+
+/* Fix modal mouse wheel issues */
+/* https://github.com/twbs/bootstrap/issues/16297 */
+.modal.fade.in {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.presentations, .upcoming-events {
+    font-size: 22px;
+}
+
+.presentations a, .upcoming-events a{
+    color: #{{ site.color.main-links }};
+}
+
+.feature-text {
+    font-size: 18px;
+    text-align: left;
+}
+
+.central-list {
+    text-align: left;
+    padding-left: 100px;
+}
+
+.central-list li {
+    padding: 2px 5px;
+    font-size: 18px;
+}
+
+.features {
+    margin-top: 30px;
+    background: #{{ site.color.primary }};
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+
+#navbar-toggle {
+    border-color: #{{ site.color.primary-dark }};
+}
+
+#navbar-toggle:hover,
+#navbar-toggle:focus,
+#navbar-toggle:active {
+    background-color: #{{ site.color.primary-dark }};
+}
+
+#page-top-button {
+    border-color: #{{ site.color.page-top-button-border }};
+    background-color: #{{ site.color.page-top-button }};
+}
+
+#page-top-button:hover,
+#page-top-button:focus,
+#page-top-button:active {
+    border-color: #{{ site.color.page-top-button-hover-border }};
+    background-color: #{{ site.color.page-top-button-hover }};
+}
+
+.primary-content{
+    background-color: #{{ site.color.primary-content-backgraund }} !important;
+}
+
+.secondary-content{
+    background-color: #{{ site.color.secondary-content-backgraund }} !important;
+}
+
+@media(min-width:768px) {
+    header .container {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    header .intro-text .name {
+        font-size: 4.75em;
+    }
+
+    header .intro-text .skills {
+        font-size: 1.75em;
+    }
+}
+
+@media(min-width:768px) {
+    .navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width:767px) {
+    section {
+        padding: 25px 0;
+    }
+
+    section.first {
+        padding-top: 30px;
+    }
+
+    .portfolio .portfolio-item {
+        height: 100px;
+    }
+
+    .portfolio .portfolio-item.feature-item {
+        height: 196px;
+    }
+
+    .feature-text {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .second-title {
+        font-size: 24px;
+    }
+
+    .central-list {
+        text-align: left;
+        padding-left: 100px;
+    }
+
+    .central-list li {
+        padding: 0px 5px;
+        font-size: 16px;
+    }
+}
+
+
+@media(min-width:992px) and (max-width:1199px){
+    .portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+
+    .portfolio .portfolio-item.feature-item {
+        height: 210px;
+    }
+
+    .second-title {
+        font-size: 24px;
+    }
+
+    .central-list {
+        text-align: left;
+        padding-left: 26px;
+    }
+
+    .central-list li {
+        padding: 2px 5px;
+        font-size: 16px;
+    }
+
+    .feature-text {
+        font-size: 18px;
+        text-align: left;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+
+    .portfolio .portfolio-item.feature-item {
+        height: 210px;
+    }
+
+    .second-title {
+        font-size: 24px;
+    }
+
+    .central-list {
+        text-align: left;
+        padding-left: 26px;
+    }
+
+    .central-list li {
+        padding: 2px 5px;
+        font-size: 16px;
+    }
+
+    .feature-text {
+        font-size: 16px;
+        text-align: left;
+    }
+}

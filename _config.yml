@@ -1,3 +1,77 @@
+# Site settings
 title: JanusGraph
-description: Distributed graph database
-theme: jekyll-theme-slate
+url: https://janusgraph.org
+description: "Distributed graph database"
+keywords: "database, graph, distributed, scalable, janusgraph, opensource"
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  # header
+  primary: 2c3e50
+  primary-dark: 233140
+  hover-on-primary: ccf5c9
+  #
+  # main text
+  secondary: 2c3e50
+  # backgraund on logo and features
+  primary-content-backgraund: 9fe6d8
+  # backgraund on about, upcoming events, presentations, users
+  secondary-content-backgraund: ffffff
+  #
+  # links
+  main-links: 46a280
+  feature-links: 2c3e50
+  #
+  # users
+  users-hover-border: ccf5c9
+  users-hover-rgb: "24,288,156"
+  #
+  # page top button (visible on small screens)
+  page-top-button: 2c3e50
+  page-top-button-border: 2c3e50
+  page-top-button-hover: 1a242f
+  page-top-button-hover-border: 161f29
+  #
+  # main buttons
+  button-text: 46a280
+  button-border: 95eccc
+  button-text-hover: 2c3e50
+  button-border-hover: 23c379
+  #
+  # footer
+  footer-above: 2c3e50
+  footer-below: 233140
+  footer-links: 95eccc
+  social: ffffff
+  social-border: ffffff
+  social-hover: 18bc9c
+  social-border-hover: ffffff
+  social-backgraund-hover: ffffff
+  footer-button: ffffff
+  footer-button-border: ffffff
+  footer-button-hover: 18bc9c
+  footer-button-border-hover: ffffff
+  footer-button-backgraund-hover: ffffff
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - icon: fab fa-twitter
+    url: https://twitter.com/JanusGraph
+  - icon: fab fa-gitter
+    url: https://gitter.im/janusgraph/janusgraph
+  - icon: fab fa-stack-overflow
+    url: https://stackoverflow.com/questions/tagged/janusgraph
+  - icon: fab fa-github
+    url: https://github.com/JanusGraph/janusgraph
+  - icon: far fa-comments
+    url: https://groups.google.com/forum/#!forum/janusgraph-users
+
+# Build settings
+markdown: kramdown
+permalink: pretty

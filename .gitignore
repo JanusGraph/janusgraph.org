@@ -6,3 +6,7 @@
 
 # Generated site when testing locally
 _site
+
+.jekyll-metadata
+Gemfile.lock
+.idea
