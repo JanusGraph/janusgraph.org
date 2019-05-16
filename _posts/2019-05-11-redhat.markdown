@@ -1,0 +1,7 @@
+---
+layout: default
+href: https://www.redhat.com
+img: redhat.png
+alt: Red Hat
+
+---
