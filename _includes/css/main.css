@@ -418,6 +418,19 @@ footer .footer-below {
     outline: 0;
 }
 
+a.all-users-link,
+a.all-users-link:focus,
+a.all-users-link:hover,
+a.all-users-link:active,
+a.all-users-link.active {
+    width: auto; !important;
+    margin: 60px 0 0 0; !important;
+    white-space: normal; !important;
+    vertical-align: middle; !important;
+    text-align: center; !important;
+    border-width: 0; !important;
+}
+
 .scroll-top {
     z-index: 1049;
     position: fixed;
@@ -593,6 +606,14 @@ footer .footer-below {
         padding: 0px 5px;
         font-size: 16px;
     }
+
+    a.all-users-link,
+    a.all-users-link:focus,
+    a.all-users-link:hover,
+    a.all-users-link:active,
+    a.all-users-link.active {
+        margin: 0; !important;
+    }
 }
 
 
@@ -652,4 +673,25 @@ footer .footer-below {
         font-size: 16px;
         text-align: left;
     }
+}
+
+/* 2.4 columns per element to fit 5 elements */
+
+.col-2dot4,
+.col-sm-2dot4,
+.col-md-2dot4,
+.col-lg-2dot4,
+.col-xl-2dot4 {
+    position:relative;
+    min-height:1px;
+    padding-left:15px;
+    padding-right:15px
+}
+
+@media (min-width:768px){
+    .col-sm-2dot4{float:left}
+    .col-sm-2dot4{width:20%}
+    .col-sm-pull-2dot4{right:20%}
+    .col-sm-push-2dot4{left:20%}
+    .col-sm-offset-2dot4{margin-left:20%}
 }

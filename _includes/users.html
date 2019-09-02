@@ -10,14 +10,44 @@
             </div>
             <span class="users-intro">The following users have deployed JanusGraph in production.</span>
             <div class="row">
+                {% assign element_col_class = 'col-sm-3' %}
+                {% assign mod_remainder = site.posts | size | modulo: 4 %}
+                {% assign mod_remainder = 4 | minus: mod_remainder %}
+                {% assign mod_remainder = mod_remainder | modulo: 4 %}
+                {% assign mod_remainder_tmp = site.posts | size | modulo: 3 %}
+                {% assign mod_remainder_tmp = 3 | minus: mod_remainder_tmp %}
+                {% assign mod_remainder_tmp = mod_remainder_tmp | modulo: 3 %}
+                {% if mod_remainder > mod_remainder_tmp %}
+                    {% assign element_col_class = 'col-sm-4' %}
+                    {% assign mod_remainder = mod_remainder_tmp %}
+                {% endif %}
+                {% assign mod_remainder_tmp = site.posts | size | modulo: 5 %}
+                {% assign mod_remainder_tmp = 5 | minus: mod_remainder_tmp %}
+                {% assign mod_remainder_tmp = mod_remainder_tmp | modulo: 5 %}
+                {% if mod_remainder > mod_remainder_tmp %}
+                    {% assign element_col_class = 'col-sm-2dot4' %}
+                    {% assign mod_remainder = mod_remainder_tmp %}
+                {% endif %}
                 {% for post in site.posts %}
-                    <div class="col-sm-3 portfolio-item">
+                    <div class="{{ element_col_class }} portfolio-item">
                         <a href="{{ post.href }}" class="portfolio-link" data-toggle="modal">
                             <div class="caption"></div>
                             <img src="img/logos/{{ post.img }}" class="portfolio-img" alt="{{ post.alt }}">
                         </a>
                     </div>
                 {% endfor %}
+                {% if mod_remainder != 0 %}
+                    <div class="{{ element_col_class }}">
+                        <a href="https://github.com/JanusGraph/janusgraph/blob/master/README.md#powered-by-janusgraph" class="btn btn-lg btn-outline all-users-link">
+                            See all users&nbsp; <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                {% endif %}
             </div>
+            {% if mod_remainder == 0 %}
+            <a href="https://github.com/JanusGraph/janusgraph/blob/master/README.md#powered-by-janusgraph" class="btn btn-lg btn-outline all-users-link" style="margin: 0; !important;">
+                See all users&nbsp; <i class="fas fa-arrow-right"></i>
+            </a>
+            {% endif %}
         </div>
     </section>
