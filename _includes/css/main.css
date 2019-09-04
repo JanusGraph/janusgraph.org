@@ -216,7 +216,7 @@ section.success {
     right: 0;
     margin: 0 0 15px;
     text-align: center;
-    height: 200px;
+    height: 180px;
 }
 
 .portfolio .portfolio-item .portfolio-link {
@@ -424,7 +424,7 @@ a.all-users-link:hover,
 a.all-users-link:active,
 a.all-users-link.active {
     width: auto; !important;
-    margin: 60px 0 0 0; !important;
+    margin: 48px 0 0 0; !important;
     white-space: normal; !important;
     vertical-align: middle; !important;
     text-align: center; !important;
@@ -614,12 +614,17 @@ a.all-users-link.active {
     a.all-users-link.active {
         margin: 0; !important;
     }
+
+    .portfolio .portfolio-img {
+        max-width: 220px;
+    }
 }
 
 
 @media(min-width:992px) and (max-width:1199px){
     .portfolio .portfolio-item {
         margin: 0 0 30px;
+        height: 160px;
     }
 
     .portfolio .portfolio-item.feature-item {
@@ -649,6 +654,15 @@ a.all-users-link.active {
 @media(min-width:768px) and (max-width:991px){
     .portfolio .portfolio-item {
         margin: 0 0 30px;
+        height: 130px;
+    }
+
+    a.all-users-link,
+    a.all-users-link:focus,
+    a.all-users-link:hover,
+    a.all-users-link:active,
+    a.all-users-link.active {
+        margin: 20px 0 0 0; !important;
     }
 
     .portfolio .portfolio-item.feature-item {
