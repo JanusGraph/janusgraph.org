@@ -1,3 +1,5 @@
+{% assign eventsCount = site.upcoming_events | size %}
+{% if eventsCount > 0 %}
 <section class="secondary-content">
     <div class="container">
         <div class="row">
@@ -6,8 +8,11 @@
                 <hr class="title-line calendar">
             </div>
             <ul class="upcoming-events">
-                <li><a href="https://datadaytexas.com/2020-graph-summit/news">Global Graph Summit 2020</a> - January 25, 2020</li>
+                {% for event in site.upcoming_events %}
+                <li>{{ event }}</li>
+                {% endfor %}
             </ul>
         </div>
     </div>
 </section>
+{% endif %}
