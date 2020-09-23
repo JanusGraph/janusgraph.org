@@ -12,6 +12,7 @@ bing_verify:
 
 # Upcoming events list. It is used in upcoming-features.html
 upcoming_events:
+  - <a href="https://www.experoinc.com/get/janusgraph-user-group">JanusGraph Online Meetup</a>, Bruno Berriso, Florian Grieskamp, & Ted Wilmes - 2020.09.30
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
