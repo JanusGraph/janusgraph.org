@@ -76,7 +76,7 @@ social:
   - icon: fab fa-github
     url: https://github.com/JanusGraph/janusgraph
   - icon: far fa-comments
-    url: https://groups.google.com/forum/#!forum/janusgraph-users
+    url: https://lists.lfaidata.foundation/g/janusgraph-users/topics
 
 # Build settings
 markdown: kramdown
