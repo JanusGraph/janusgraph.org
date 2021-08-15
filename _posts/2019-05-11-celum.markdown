@@ -1,6 +1,6 @@
 ---
 layout: default
-href: https://www.celum.com/en/graph-driven-and-reactive-architecture
+href: https://www.celum.com
 img: celum.png
 alt: Celum
 
