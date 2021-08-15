@@ -1,6 +1,6 @@
 ---
 layout: default
-href: https://www.compose.com/databases/janusgraph
+href: https://www.compose.com
 img: compose.png
 alt: Compose
 
