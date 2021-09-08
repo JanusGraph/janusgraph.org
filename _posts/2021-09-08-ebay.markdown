@@ -1,0 +1,7 @@
+---
+layout: default
+href: https://www.ebay.com
+img: ebay.png
+alt: eBay
+
+---
