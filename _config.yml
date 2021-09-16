@@ -75,6 +75,8 @@ social:
     url: https://stackoverflow.com/questions/tagged/janusgraph
   - icon: fab fa-github
     url: https://github.com/JanusGraph/janusgraph
+  - icon: fab fa-linkedin-in
+    url: https://www.linkedin.com/company/janusgraph
   - icon: far fa-comments
     url: https://lists.lfaidata.foundation/g/janusgraph-users/topics
 
