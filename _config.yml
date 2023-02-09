@@ -69,8 +69,8 @@ color:
 social:
   - icon: fab fa-twitter
     url: https://twitter.com/JanusGraph
-  - icon: fab fa-gitter
-    url: https://gitter.im/janusgraph/janusgraph
+  - icon: fab fa-discord
+    url: https://discord.gg/5n4fjv4QAf
   - icon: fab fa-stack-overflow
     url: https://stackoverflow.com/questions/tagged/janusgraph
   - icon: fab fa-github
