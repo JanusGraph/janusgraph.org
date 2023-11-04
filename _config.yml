@@ -15,6 +15,7 @@ bing_verify:
 # upcoming_events:
 #  - <a href="${event_link}">Even link name</a>, Authors or additional information - ${date}
 upcoming_events:
+  - <a href="https://events.teams.microsoft.com/event/d51f3bc8-a376-4518-8f9b-2ccf5f638635@5905aed6-175d-4ef4-914d-3ee92a398d55">JanusGraph Online Meetup</a>, Oleksandr Porunov, Boxuan Li - 06.11.2023
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
