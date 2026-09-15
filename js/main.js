@@ -14,12 +14,13 @@
   onScroll();
   w.addEventListener('scroll', onScroll, { passive: true });
 
-  /* Theme switcher: system -> light -> dark -> system. The saved choice is applied
+  /* Theme switcher: a small menu with Light / Dark / System. The saved choice is applied
      before first paint by the inline script in _includes/head.html. */
   var THEME_KEY = 'theme';
-  var THEME_ORDER = ['system', 'light', 'dark'];
   var THEME_COLORS = { light: '#ffffff', dark: '#0b1512' };
+  var themeMenu = d.querySelector('[data-theme-menu]');
   var themeButton = d.querySelector('[data-theme-toggle]');
+  var themeOptions = d.querySelector('#theme-options');
   var themeMetas = d.querySelectorAll('meta[name="theme-color"]');
   var prefersDark = w.matchMedia('(prefers-color-scheme: dark)');
 
@@ -37,18 +38,50 @@
   }
   function syncThemeUI() {
     var theme = currentTheme();
-    var next = THEME_ORDER[(THEME_ORDER.indexOf(theme) + 1) % THEME_ORDER.length];
     var effective = theme === 'system' ? (prefersDark.matches ? 'dark' : 'light') : theme;
     if (themeButton) {
-      var label = 'Theme: ' + theme + '. Switch to ' + next;
-      themeButton.setAttribute('aria-label', label);
-      themeButton.setAttribute('title', label);
+      themeButton.setAttribute('aria-label', 'Theme: ' + theme);
+      themeButton.setAttribute('title', 'Theme: ' + theme);
     }
+    d.querySelectorAll('[data-theme-option]').forEach(function (opt) {
+      opt.setAttribute('aria-checked', String(opt.getAttribute('data-theme-option') === theme));
+    });
     themeMetas.forEach(function (m) { m.setAttribute('content', THEME_COLORS[effective]); });
   }
-  if (themeButton) {
+  function setThemeMenu(open) {
+    if (!themeOptions || !themeButton) return;
+    themeOptions.hidden = !open;
+    themeButton.setAttribute('aria-expanded', String(open));
+    if (open) {
+      var checked = themeOptions.querySelector('[aria-checked="true"]') || themeOptions.querySelector('button');
+      if (checked) checked.focus();
+    }
+  }
+  if (themeMenu && themeButton && themeOptions) {
     themeButton.addEventListener('click', function () {
-      applyTheme(THEME_ORDER[(THEME_ORDER.indexOf(currentTheme()) + 1) % THEME_ORDER.length]);
+      setThemeMenu(themeOptions.hidden);
+    });
+    themeOptions.querySelectorAll('[data-theme-option]').forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        applyTheme(opt.getAttribute('data-theme-option'));
+        setThemeMenu(false);
+        themeButton.focus();
+      });
+    });
+    themeOptions.addEventListener('keydown', function (e) {
+      var items = Array.prototype.slice.call(themeOptions.querySelectorAll('[data-theme-option]'));
+      var i = items.indexOf(d.activeElement);
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        var step = e.key === 'ArrowDown' ? 1 : -1;
+        items[(i + step + items.length) % items.length].focus();
+      }
+    });
+    d.addEventListener('click', function (e) {
+      if (!themeOptions.hidden && !themeMenu.contains(e.target)) setThemeMenu(false);
+    });
+    d.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !themeOptions.hidden) { setThemeMenu(false); themeButton.focus(); }
     });
   }
   var onSchemeChange = function () { syncThemeUI(); };
