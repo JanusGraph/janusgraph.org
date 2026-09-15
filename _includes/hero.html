@@ -1,0 +1,73 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true">
+    <svg class="hero-graph" viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg">
+      <g class="edges">
+        <path d="M70 90 L190 50 L330 120 L470 70 L560 180"/>
+        <path d="M70 90 L120 230 L260 270 L410 250 L560 180"/>
+        <path d="M190 50 L120 230 M330 120 L260 270 M330 120 L410 250 M470 70 L410 250"/>
+        <path d="M410 250 L540 330 L560 180 M120 230 L80 380 L220 430 L370 400 L540 330"/>
+        <path d="M260 270 L220 430 M260 270 L370 400 M370 400 L500 470 L540 330 M540 330 L610 410 L500 470 M20 260 L120 230 M20 260 L80 380"/>
+      </g>
+      <g class="nodes">
+        <circle cx="70" cy="90" r="4"/><circle cx="190" cy="50" r="4"/><circle cx="330" cy="120" r="5"/><circle cx="470" cy="70" r="4"/><circle cx="560" cy="180" r="5"/>
+        <circle cx="20" cy="260" r="4"/><circle cx="80" cy="380" r="4"/><circle cx="220" cy="430" r="5"/><circle cx="500" cy="470" r="4"/><circle cx="610" cy="410" r="4"/>
+        <circle cx="540" cy="330" r="6"/>
+      </g>
+      <g class="hubs">
+        <circle cx="120" cy="230" r="9"/><circle cx="260" cy="270" r="11"/><circle cx="410" cy="250" r="9"/><circle cx="370" cy="400" r="8"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-logo reveal">{% include logo.svg %}</div>
+      <h1 id="hero-title" class="reveal">{{ site.tagline }}</h1>
+      <p class="lede reveal">JanusGraph is optimized for storing and querying graphs containing hundreds of billions of vertices and edges distributed across a multi-machine cluster. It is transactional, supports thousands of concurrent users in real time, and is fully open source under the Apache 2.0 license.</p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary btn-lg" href="{{ site.project.getting_started }}">
+          <span>Get started</span>{% include icon.html name="arrow-right" %}
+        </a>
+        <a class="btn btn-outline btn-lg" href="{{ site.project.repo_url }}">
+          {% include icon.html name="github" %}<span>View on GitHub</span>
+        </a>
+      </div>
+      <ul class="hero-meta reveal" aria-label="Project facts">
+        <li>
+          <a class="chip chip-link" href="{{ site.project.releases }}" data-release>
+            <span class="chip-dot" aria-hidden="true"></span>
+            <span>Latest release</span><strong data-release-tag></strong>
+          </a>
+        </li>
+        <li><span class="chip">{% include icon.html name="award" %}Apache 2.0 license</span></li>
+        <li><a class="chip chip-link" href="{{ site.project.lf_project }}">{% include icon.html name="layers" %}A Linux Foundation project</a></li>
+      </ul>
+    </div>
+
+    <div class="hero-demo reveal">
+      <figure class="code-card" id="quickstart">
+        <figcaption class="code-bar">
+          <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="code-title">Gremlin Console</span>
+          <button class="code-copy" type="button" data-copy="#quickstart" aria-label="Copy commands">
+            {% include icon.html name="copy" class="icon-copy" %}{% include icon.html name="check" class="icon-check" %}
+            <span class="code-copy-label">Copy</span>
+          </button>
+        </figcaption>
+<pre><code><span class="c-line" data-cmd="bin/gremlin.sh"><span class="c-prompt">$</span> bin/gremlin.sh</span>
+<span class="c-line" data-cmd="graph = JanusGraphFactory.open('conf/janusgraph-inmemory.properties')"><span class="c-prompt">gremlin&gt;</span> graph = JanusGraphFactory.open(<span class="c-str">'conf/janusgraph-inmemory.properties'</span>)</span>
+<span class="c-out">==&gt;standardjanusgraph[inmemory:[127.0.0.1]]</span>
+<span class="c-line" data-cmd="GraphOfTheGodsFactory.loadWithoutMixedIndex(graph, true)"><span class="c-prompt">gremlin&gt;</span> GraphOfTheGodsFactory.loadWithoutMixedIndex(graph, <span class="c-kw">true</span>)</span>
+<span class="c-out">==&gt;null</span>
+<span class="c-line" data-cmd="g = graph.traversal()"><span class="c-prompt">gremlin&gt;</span> g = graph.traversal()</span>
+<span class="c-out">==&gt;graphtraversalsource[standardjanusgraph[inmemory:[127.0.0.1]], standard]</span>
+<span class="c-line" data-cmd="g.V().has('name', 'hercules').out('father').out('father').values('name')"><span class="c-prompt">gremlin&gt;</span> g.V().has(<span class="c-str">'name'</span>, <span class="c-str">'hercules'</span>).out(<span class="c-str">'father'</span>).out(<span class="c-str">'father'</span>).values(<span class="c-str">'name'</span>)</span>
+<span class="c-out c-out-hl">==&gt;saturn</span></code></pre>
+        <div class="code-foot">
+          <span>Traverse the <em>Graph of the Gods</em> in seconds.</span>
+          <a href="https://docs.janusgraph.org/getting-started/basic-usage/">Basic usage guide {% include icon.html name="arrow-up-right" %}</a>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>

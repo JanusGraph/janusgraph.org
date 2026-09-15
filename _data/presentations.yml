@@ -1,0 +1,42 @@
+# Recorded talks, meetups and slide decks. Newest first.
+# type: video | slides
+- title: "TinkerPop Wide: Q&A with JanusGraph"
+  url: https://youtu.be/TJmmkJFyJoI
+  speakers: Oleksandr Porunov, Boxuan Li & Stephen Mallette
+  date: 2024-02-23
+  type: video
+- title: JanusGraph Online Meetup 5
+  url: https://youtu.be/C9IYIapw6As
+  speakers: Boxuan Li, Natalia Tisseyre & Oleksandr Porunov
+  date: 2023-11-06
+  type: video
+- title: JanusGraph Online Meetup 4
+  url: https://youtu.be/oo-b4P1kHu8
+  speakers: Marc de Lignie, Saurabh Verma & Bruno Berisso
+  date: 2021-05-18
+  type: video
+- title: JanusGraph Online Meetup 3
+  url: https://youtu.be/g71MqqirQlE
+  speakers: Florian Grieskamp, Bruno Berisso & Ted Wilmes
+  date: 2020-10-07
+  type: video
+- title: JanusGraph Online Meetup 2
+  url: https://youtu.be/d6NRdIxdT60
+  speakers: Ryan Stauffer, Ted Wilmes, Aaron Ploetz, Becky Nelson & Rick Paiste
+  date: 2019-08-07
+  type: video
+- title: JanusGraph Online Meetup 1
+  url: https://youtu.be/vCKLzIlDfpU
+  speakers: Chris Hupman, Ryan Stauffer, Jan Jansen, John Mertic & Ted Wilmes
+  date: 2019-03-27
+  type: video
+- title: "DataWorks Summit 2017: Large Scale Graph Analytics with JanusGraph"
+  url: https://www.slideshare.net/ptgoetz/large-scale-graph-analytics-with-janusgraph
+  speakers: P. Taylor Goetz
+  date: 2017-06-13
+  type: slides
+- title: "HBaseCon 2017: Community-Driven Graphs with JanusGraph"
+  url: https://www.slideshare.net/HBaseCon/communitydriven-graphs-with-janusgraph-77117443
+  speakers: Jing Chen He & Jason Plurad
+  date: 2017-06-12
+  type: slides

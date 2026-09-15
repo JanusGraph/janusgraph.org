@@ -11,6 +11,53 @@ To make changes, you should install the local setup and once you're ready to
 submit changes, please provide a pointer to a previewable version via your
 published fork on GitHub. See instructions below for both of these below.
 
+## Site structure
+
+The site is a single page built with [Jekyll](https://jekyllrb.com) and hosted
+on GitHub Pages. It uses no CSS or JavaScript frameworks.
+
+| Path | Purpose |
+| --- | --- |
+| `_config.yml` | Site metadata, project links, social links and the optional `upcoming_events` list |
+| `_data/users.yml` | Organizations shown in the **Trusted in production** logo grid |
+| `_data/presentations.yml` | Talks and meetup recordings shown under **Presentations** |
+| `_layouts/default.html` | Page skeleton; pulls in the section includes below |
+| `_includes/*.html` | One include per page section (`hero`, `features`, `ecosystem`, `events`, `presentations`, `users`, `community`, `footer`, ...) |
+| `_includes/logo.svg`, `_includes/logomark.svg` | Inline copies of the official logos that follow the light/dark theme |
+| `_includes/icons.html` | SVG icon sprite |
+| `css/main.css` | The stylesheet (design tokens, layout, light and dark themes) |
+| `css/fonts/` | Self-hosted Inter font subsets |
+| `js/main.js` | Mobile navigation, scroll reveal, copy button and live GitHub stats |
+| `img/janusgraph-logo.svg`, `img/janusgraph-logomark.svg` | Official logos from [JanusGraph/logos](https://github.com/JanusGraph/logos) |
+| `img/logos/` | Logos of production users |
+
+### Common edits
+
+* **Add a production user:** put the logo in `img/logos/` (SVG preferred) and
+  add an entry at the top of `_data/users.yml`:
+
+  ```yaml
+  - name: Example Corp
+    url: https://example.com
+    logo: example.svg
+  ```
+
+* **Add a presentation:** add an entry at the top of `_data/presentations.yml`
+  with `title`, `url`, `speakers`, `date` (`YYYY-MM-DD`) and `type`
+  (`video` or `slides`).
+
+* **Announce an event:** uncomment and fill in `upcoming_events` in
+  `_config.yml`. The **Upcoming events** section only renders when the list
+  is non-empty.
+
+* **Regenerate the social preview image** (`img/janusgraph-social.png`, used
+  for Open Graph / Twitter cards): open `_tools/social-card.html` in a browser
+  and capture it at 1200×630, for example with Playwright:
+
+  ```bash
+  npx playwright screenshot --viewport-size=1200,630 _tools/social-card.html img/janusgraph-social.png
+  ```
+
 ## Preview changes locally
 
 While developing the site, it is very helpful to have fast turnaround between
@@ -33,8 +80,17 @@ preview changes that we make using a local setup.
    ```
 
 1. Visit http://localhost:4000/ to see the site. Now, any changes you make to
-   `index.md` or any dependent files will be instantly previewable in your browser
-   with a refresh.
+   the templates, data files or stylesheet will be instantly previewable in
+   your browser with a refresh.
+
+Alternatively, build with the same Docker image GitHub Pages uses, without
+installing Ruby:
+
+```bash
+make docker-build
+```
+
+The generated site is written to `_site/`.
 
 ## Preview via GitHub
 
@@ -171,3 +227,11 @@ fork as follows:
 
 This repo uses a combination of [Apache 2.0](APACHE-2.0.txt) and
 [CC-BY-4.0](CC-BY-4.0.txt); see [`LICENSE.txt`](LICENSE.txt) for details.
+
+Third-party assets bundled with the site:
+
+* [Inter](https://rsms.me/inter/) typeface — SIL Open Font License 1.1
+  (`css/fonts/LICENSE-Inter.txt`)
+* Interface icons adapted from [Feather](https://feathericons.com) — MIT
+* Brand marks from [Simple Icons](https://simpleicons.org) — CC0 1.0
+* User logos in `img/logos/` are trademarks of their respective owners

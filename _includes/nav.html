@@ -1,42 +1,33 @@
-   <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" id="navbar-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
-            </div>
+<header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand" href="#top" aria-label="JanusGraph – back to top">
+      {% include logomark.svg %}
+      <span class="brand-name">JanusGraph</span>
+    </a>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="https://docs.janusgraph.org">Docs</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="https://github.com/JanusGraph/janusgraph/releases">Download</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="https://crowdfunding.linuxfoundation.org/initiatives/janusgraph">
-                            Donate &nbsp; <i class="fas fa-heart"></i>
-                        </a>
-                    </li>
-                    <li class="page-scroll">
-                        <div class="nav-github">
-                            <a class="github-button" href="https://github.com/janusgraph/janusgraph" data-size="large" data-show-count="true" aria-label="janusgraph/janusgraph on GitHub">GitHub</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      {% include icon.html name="menu" class="icon-menu" %}
+      {% include icon.html name="close" class="icon-close" %}
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#ecosystem">Ecosystem</a></li>
+        <li><a href="#users">Users</a></li>
+        <li><a href="#presentations">Presentations</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="{{ site.project.docs }}">Docs</a></li>
+        <li><a href="{{ site.project.releases }}">Download</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-ghost btn-sm" href="{{ site.project.donate }}">
+          {% include icon.html name="heart" %}<span>Donate</span>
+        </a>
+        <a class="btn btn-dark btn-sm gh-btn" href="{{ site.project.repo_url }}">
+          {% include icon.html name="github" %}<span>GitHub</span><span class="gh-stars" data-stars hidden></span>
+        </a>
+      </div>
     </nav>
+  </div>
+</header>

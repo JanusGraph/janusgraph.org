@@ -1,7 +1,0 @@
----
-layout: default
-href: https://www.target.com
-img: target.png
-alt: Target
-
----

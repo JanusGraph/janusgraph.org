@@ -1,8 +1,10 @@
 # Site settings
 title: JanusGraph
+tagline: Distributed, open source, massively scalable graph database
 url: https://janusgraph.org
-description: "Distributed graph database"
-keywords: "database, graph, distributed, scalable, janusgraph, opensource"
+description: "JanusGraph is a scalable, transactional graph database optimized for storing and querying graphs containing hundreds of billions of vertices and edges distributed across a multi-machine cluster."
+keywords: "database, graph, distributed, scalable, janusgraph, opensource, gremlin, tinkerpop"
+lang: en
 
 # Google webmaster tools
 google_verify:
@@ -10,75 +12,61 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
-# Upcoming events list. It is used in upcoming-features.html
-# Example:
+# Upcoming events list. Rendered by _includes/events.html when non-empty.
+# Each entry may contain HTML. Example:
 # upcoming_events:
-#  - <a href="${event_link}">Even link name</a>, Authors or additional information - ${date}
+#  - <a href="${event_link}">Event name</a>, Speakers or additional information - ${date}
 
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  # header
-  primary: 2c3e50
-  primary-dark: 233140
-  hover-on-primary: ccf5c9
-  #
-  # main text
-  secondary: 2c3e50
-  # backgraund on logo and features
-  primary-content-backgraund: 9fe6d8
-  # backgraund on about, upcoming events, presentations, users
-  secondary-content-backgraund: ffffff
-  #
-  # links
-  main-links: 46a280
-  feature-links: 2c3e50
-  #
-  # users
-  users-hover-border: ccf5c9
-  users-hover-rgb: "24,288,156"
-  #
-  # page top button (visible on small screens)
-  page-top-button: 2c3e50
-  page-top-button-border: 2c3e50
-  page-top-button-hover: 1a242f
-  page-top-button-hover-border: 161f29
-  #
-  # main buttons
-  button-text: 46a280
-  button-border: 95eccc
-  button-text-hover: 2c3e50
-  button-border-hover: 23c379
-  #
-  # footer
-  footer-above: 2c3e50
-  footer-below: 233140
-  footer-links: 95eccc
-  social: ffffff
-  social-border: ffffff
-  social-hover: 18bc9c
-  social-border-hover: ffffff
-  social-backgraund-hover: ffffff
-  footer-button: ffffff
-  footer-button-border: ffffff
-  footer-button-hover: 18bc9c
-  footer-button-border-hover: ffffff
-  footer-button-backgraund-hover: ffffff
+# Project links used across the site
+project:
+  repo: JanusGraph/janusgraph
+  repo_url: https://github.com/JanusGraph/janusgraph
+  docs: https://docs.janusgraph.org
+  getting_started: https://docs.janusgraph.org/getting-started/installation/
+  releases: https://github.com/JanusGraph/janusgraph/releases
+  changelog: https://docs.janusgraph.org/changelog/
+  donate: https://crowdfunding.linuxfoundation.org/initiatives/janusgraph
+  all_users: https://github.com/JanusGraph/janusgraph/blob/master/README.md#powered-by-janusgraph
+  users_list: https://lists.lfaidata.foundation/g/janusgraph-users/topics
+  dev_list: https://lists.lfaidata.foundation/g/janusgraph-dev/topics
+  gremlin_users: https://groups.google.com/forum/#!forum/gremlin-users
+  lf_project: https://lfaidata.foundation/projects/janusgraph/
+  youtube: https://www.youtube.com/channel/UCmG9rmIj89bL5YykKda_jIQ
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social networks. `icon` must match a symbol id in _includes/icons.html (i-<icon>).
 social:
-  - icon: fab fa-twitter
-    url: https://twitter.com/JanusGraph
-  - icon: fab fa-discord
-    url: https://discord.gg/5n4fjv4QAf
-  - icon: fab fa-stack-overflow
-    url: https://stackoverflow.com/questions/tagged/janusgraph
-  - icon: fab fa-github
+  - name: GitHub
+    icon: github
     url: https://github.com/JanusGraph/janusgraph
-  - icon: fab fa-linkedin-in
+  - name: Discord
+    icon: discord
+    url: https://discord.gg/5n4fjv4QAf
+  - name: Stack Overflow
+    icon: stackoverflow
+    url: https://stackoverflow.com/questions/tagged/janusgraph
+  - name: X (Twitter)
+    icon: x
+    url: https://twitter.com/JanusGraph
+  - name: LinkedIn
+    icon: linkedin
     url: https://www.linkedin.com/company/janusgraph
-  - icon: far fa-comments
+  - name: YouTube
+    icon: youtube
+    url: https://www.youtube.com/channel/UCmG9rmIj89bL5YykKda_jIQ
+  - name: Mailing list
+    icon: mail
     url: https://lists.lfaidata.foundation/g/janusgraph-users/topics
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+exclude:
+  - Makefile
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .travis.yml
+  - .idea
+  - .junie
+  - node_modules
+  - vendor
