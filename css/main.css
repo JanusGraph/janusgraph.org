@@ -397,6 +397,45 @@ html[data-theme="light"] .theme-toggle .icon-system,
 html[data-theme="dark"] .theme-toggle .icon-system { display: none; }
 html[data-theme="light"] .theme-toggle .icon-light { display: block; }
 html[data-theme="dark"] .theme-toggle .icon-dark { display: block; }
+.theme-toggle[aria-expanded="true"] { color: var(--brand); border-color: var(--brand); background: var(--brand-soft); }
+
+.theme-menu { position: relative; }
+.theme-options {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 60;
+  display: grid;
+  gap: 2px;
+  min-width: 11rem;
+  padding: 0.35rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+.theme-options[hidden] { display: none; }
+.theme-options button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-2);
+  font-size: 0.925rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+.theme-options button:hover { background: var(--brand-soft); color: var(--ink); }
+.theme-options button .icon { width: 18px; height: 18px; }
+.theme-options button span { flex: 1; }
+.theme-options button .icon-check { visibility: hidden; color: var(--brand); }
+.theme-options button[aria-checked="true"] { color: var(--ink); font-weight: 600; }
+.theme-options button[aria-checked="true"] .icon-check { visibility: visible; }
 
 @media (max-width: 1023px) {
   .nav-toggle { display: inline-flex; margin-left: 0; }

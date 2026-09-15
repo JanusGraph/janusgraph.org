@@ -26,11 +26,24 @@
     </nav>
 
     <div class="header-tools">
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Theme: system. Switch to light" title="Theme: system">
-        {% include icon.html name="monitor" class="icon-system" %}
-        {% include icon.html name="sun" class="icon-light" %}
-        {% include icon.html name="moon" class="icon-dark" %}
-      </button>
+      <div class="theme-menu" data-theme-menu>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-haspopup="menu" aria-expanded="false" aria-controls="theme-options" aria-label="Theme: system" title="Theme: system">
+          {% include icon.html name="monitor" class="icon-system" %}
+          {% include icon.html name="sun" class="icon-light" %}
+          {% include icon.html name="moon" class="icon-dark" %}
+        </button>
+        <div class="theme-options" id="theme-options" role="menu" aria-label="Theme" hidden>
+          <button type="button" role="menuitemradio" data-theme-option="light" aria-checked="false">
+            {% include icon.html name="sun" %}<span>Light</span>{% include icon.html name="check" class="icon-check" %}
+          </button>
+          <button type="button" role="menuitemradio" data-theme-option="dark" aria-checked="false">
+            {% include icon.html name="moon" %}<span>Dark</span>{% include icon.html name="check" class="icon-check" %}
+          </button>
+          <button type="button" role="menuitemradio" data-theme-option="system" aria-checked="true">
+            {% include icon.html name="monitor" %}<span>System</span>{% include icon.html name="check" class="icon-check" %}
+          </button>
+        </div>
+      </div>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         {% include icon.html name="menu" class="icon-menu" %}
         {% include icon.html name="close" class="icon-close" %}
