@@ -75,6 +75,9 @@
         e.preventDefault();
         var step = e.key === 'ArrowDown' ? 1 : -1;
         items[(i + step + items.length) % items.length].focus();
+      } else if (e.key === 'Tab') {
+        /* Leaving the menu with Tab closes it; the browser moves focus as usual. */
+        setThemeMenu(false);
       }
     });
     d.addEventListener('click', function (e) {
@@ -91,11 +94,21 @@
 
   /* Mobile navigation */
   var toggle = d.querySelector('.nav-toggle');
+  var navPanel = d.querySelector('.site-nav');
+  function navFocusables() {
+    return navPanel ? navPanel.querySelectorAll('a[href], button:not([disabled])') : [];
+  }
   function setNav(open) {
     root.classList.toggle('nav-open', open);
     if (toggle) {
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    /* The panel precedes the toggle in the DOM, so move focus into it on open;
+       otherwise Tab would skip straight past the menu into the page. */
+    if (open) {
+      var first = navFocusables()[0];
+      if (first) first.focus();
     }
   }
   if (toggle) {
@@ -106,8 +119,28 @@
       a.addEventListener('click', function () { setNav(false); });
     });
     d.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') setNav(false);
+      if (e.key === 'Escape' && root.classList.contains('nav-open')) {
+        setNav(false);
+        toggle.focus();
+      }
     });
+    if (navPanel) {
+      navPanel.addEventListener('keydown', function (e) {
+        if (e.key !== 'Tab' || !root.classList.contains('nav-open')) return;
+        var focusable = navFocusables();
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (!e.shiftKey && d.activeElement === last) {
+          /* Tab past the last item: close and let focus continue to the header tools. */
+          setNav(false);
+        } else if (e.shiftKey && d.activeElement === first) {
+          /* Shift+Tab from the first item: close and return to the button that opened it. */
+          e.preventDefault();
+          setNav(false);
+          toggle.focus();
+        }
+      });
+    }
     var desktop = w.matchMedia('(min-width: 1024px)');
     var onDesktop = function (e) { if (e.matches) setNav(false); };
     if (desktop.addEventListener) desktop.addEventListener('change', onDesktop);

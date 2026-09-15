@@ -2,8 +2,11 @@ language: ruby
 rvm:
 - 3.3
 
-install: gem update --system; gem install bundler jekyll; bundle install;
-script: jekyll build
+# Only Bundler is installed globally; Jekyll comes from the Gemfile (github-pages pins
+# Jekyll 3.10), so the build must run through `bundle exec` to avoid activating a newer
+# standalone Jekyll first.
+install: gem install bundler; bundle install;
+script: bundle exec jekyll build
 
 sudo: false
 exclude: [vendor]
