@@ -5,11 +5,6 @@
       <span class="brand-name">JanusGraph</span>
     </a>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-      {% include icon.html name="menu" class="icon-menu" %}
-      {% include icon.html name="close" class="icon-close" %}
-    </button>
-
     <nav class="site-nav" id="site-nav" aria-label="Primary">
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
@@ -29,5 +24,17 @@
         </a>
       </div>
     </nav>
+
+    <div class="header-tools">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Theme: system. Switch to light" title="Theme: system">
+        {% include icon.html name="monitor" class="icon-system" %}
+        {% include icon.html name="sun" class="icon-light" %}
+        {% include icon.html name="moon" class="icon-dark" %}
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        {% include icon.html name="menu" class="icon-menu" %}
+        {% include icon.html name="close" class="icon-close" %}
+      </button>
+    </div>
   </div>
 </header>

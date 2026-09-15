@@ -14,6 +14,48 @@
   onScroll();
   w.addEventListener('scroll', onScroll, { passive: true });
 
+  /* Theme switcher: system -> light -> dark -> system. The saved choice is applied
+     before first paint by the inline script in _includes/head.html. */
+  var THEME_KEY = 'theme';
+  var THEME_ORDER = ['system', 'light', 'dark'];
+  var THEME_COLORS = { light: '#ffffff', dark: '#0b1512' };
+  var themeButton = d.querySelector('[data-theme-toggle]');
+  var themeMetas = d.querySelectorAll('meta[name="theme-color"]');
+  var prefersDark = w.matchMedia('(prefers-color-scheme: dark)');
+
+  function currentTheme() {
+    return root.getAttribute('data-theme') || 'system';
+  }
+  function applyTheme(theme) {
+    if (theme === 'system') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', theme);
+    try {
+      if (theme === 'system') localStorage.removeItem(THEME_KEY);
+      else localStorage.setItem(THEME_KEY, theme);
+    } catch (e) { /* storage unavailable */ }
+    syncThemeUI();
+  }
+  function syncThemeUI() {
+    var theme = currentTheme();
+    var next = THEME_ORDER[(THEME_ORDER.indexOf(theme) + 1) % THEME_ORDER.length];
+    var effective = theme === 'system' ? (prefersDark.matches ? 'dark' : 'light') : theme;
+    if (themeButton) {
+      var label = 'Theme: ' + theme + '. Switch to ' + next;
+      themeButton.setAttribute('aria-label', label);
+      themeButton.setAttribute('title', label);
+    }
+    themeMetas.forEach(function (m) { m.setAttribute('content', THEME_COLORS[effective]); });
+  }
+  if (themeButton) {
+    themeButton.addEventListener('click', function () {
+      applyTheme(THEME_ORDER[(THEME_ORDER.indexOf(currentTheme()) + 1) % THEME_ORDER.length]);
+    });
+  }
+  var onSchemeChange = function () { syncThemeUI(); };
+  if (prefersDark.addEventListener) prefersDark.addEventListener('change', onSchemeChange);
+  else if (prefersDark.addListener) prefersDark.addListener(onSchemeChange);
+  syncThemeUI();
+
   /* Mobile navigation */
   var toggle = d.querySelector('.nav-toggle');
   function setNav(open) {
