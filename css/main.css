@@ -70,8 +70,38 @@
   color-scheme: light;
 }
 
+/* Dark theme tokens. Applied when the visitor picked "dark", or when the OS prefers dark
+   and the visitor did not pick "light" (see the theme switcher in js/main.js). */
+:root[data-theme="dark"] {
+  --bg: #0b1512;
+  --bg-alt: #0e1a16;
+  --bg-translucent: rgba(11, 21, 18, 0.8);
+  --surface: #111e19;
+  --border: #1f302a;
+  --border-strong: #2f463d;
+  --ink: #e9f1ed;
+  --ink-2: #b9c9c2;
+  --ink-3: #86998f;
+
+  --brand: #35c092;
+  --brand-strong: #5bd3a9;
+  --brand-soft: rgba(53, 192, 146, 0.12);
+  --brand-glow: rgba(53, 192, 146, 0.14);
+  --on-brand: #06211a;
+  --logo-accent: #2fb887;
+  --dot: rgba(53, 192, 146, 0.2);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 14px 34px -14px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 32px 64px -24px rgba(0, 0, 0, 0.6);
+
+  --code-bg: #0a1310;
+
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0b1512;
     --bg-alt: #0e1a16;
     --bg-translucent: rgba(11, 21, 18, 0.8);
@@ -303,7 +333,7 @@ a.chip-link:hover { text-decoration: none; border-color: var(--brand); color: va
 .logo-accent { fill: var(--logo-accent); }
 .logo-ink { fill: currentColor; }
 
-.site-nav { display: flex; align-items: center; gap: 1.5rem; margin-left: auto; }
+.site-nav { display: flex; align-items: center; gap: 1.5rem; margin-left: auto; margin-right: 0.75rem; }
 .nav-links { display: flex; align-items: center; gap: 0.15rem; }
 .nav-links a {
   display: inline-block;
@@ -345,8 +375,32 @@ a.chip-link:hover { text-decoration: none; border-color: var(--brand); color: va
 .nav-open .nav-toggle .icon-close { display: block; }
 .nav-open .nav-toggle .icon-menu { display: none; }
 
+.header-tools { display: flex; align-items: center; gap: 0.5rem; }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+.theme-toggle:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-soft); }
+.theme-toggle .icon { width: 20px; height: 20px; display: none; }
+.theme-toggle .icon-system { display: block; }
+html[data-theme="light"] .theme-toggle .icon-system,
+html[data-theme="dark"] .theme-toggle .icon-system { display: none; }
+html[data-theme="light"] .theme-toggle .icon-light { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-dark { display: block; }
+
 @media (max-width: 1023px) {
-  .nav-toggle { display: inline-flex; }
+  .nav-toggle { display: inline-flex; margin-left: 0; }
+  .header-tools { margin-left: auto; }
   .site-nav {
     display: none;
     position: absolute;

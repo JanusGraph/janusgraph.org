@@ -27,7 +27,7 @@ on GitHub Pages. It uses no CSS or JavaScript frameworks.
 | `_includes/icons.html` | SVG icon sprite |
 | `css/main.css` | The stylesheet (design tokens, layout, light and dark themes) |
 | `css/fonts/` | Self-hosted Inter font subsets |
-| `js/main.js` | Mobile navigation, scroll reveal, copy button and live GitHub stats |
+| `js/main.js` | Theme switcher, mobile navigation, scroll reveal, copy button and live GitHub stats |
 | `img/janusgraph-logo.svg`, `img/janusgraph-logomark.svg` | Official logos from [JanusGraph/logos](https://github.com/JanusGraph/logos) |
 | `img/logos/` | Logos of production users |
 

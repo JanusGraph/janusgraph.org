@@ -33,7 +33,15 @@
   <!-- Bing verification -->
   {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
 
+  <script>
+    (function (html) {
+      html.classList.add('js');
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') html.setAttribute('data-theme', theme);
+      } catch (e) { /* storage unavailable */ }
+    })(document.documentElement);
+  </script>
   <link rel="preload" href="css/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
-  <script>document.documentElement.classList.add('js');</script>
 </head>
