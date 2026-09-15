@@ -1,0 +1,50 @@
+# Builds the site the same way GitHub Pages does and fails the check if the build breaks.
+# Production publishing is still done by GitHub Pages from the master branch.
+name: Build site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Jekyll build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Build with the GitHub Pages Jekyll image
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+          future: false
+          verbose: true
+
+      - name: Sanity-check the output
+        run: |
+          test -f _site/index.html
+          test -f _site/css/main.css
+          test -f _site/js/main.js
+          if grep -qE '\{\{|\{%' _site/index.html; then
+            echo "Unrendered Liquid tags found in _site/index.html" >&2
+            grep -nE '\{\{|\{%' _site/index.html >&2
+            exit 1
+          fi
+          echo "Build output looks good."
+
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          retention-days: 14

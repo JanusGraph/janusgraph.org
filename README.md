@@ -1,9 +1,12 @@
 # janusgraph.org
 
 [![Website][website-shield]][website-link]
+[![Build][build-shield]][build-link]
 
 [website-shield]: https://img.shields.io/website-up-down-green-red/https/janusgraph.org.svg?label=janusgraph.org
 [website-link]: https://janusgraph.org
+[build-shield]: https://github.com/JanusGraph/janusgraph.org/actions/workflows/build.yml/badge.svg
+[build-link]: https://github.com/JanusGraph/janusgraph.org/actions/workflows/build.yml
 
 This repo generates the content served on https://janusgraph.org
 
@@ -91,6 +94,10 @@ make docker-build
 ```
 
 The generated site is written to `_site/`.
+
+Every pull request is also built by the [Build site](https://github.com/JanusGraph/janusgraph.org/actions/workflows/build.yml)
+GitHub Actions workflow, which uses the same image and uploads the result as
+an artifact. Production publishing is done by GitHub Pages from `master`.
 
 ## Preview via GitHub
 
