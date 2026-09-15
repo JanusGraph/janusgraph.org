@@ -1,7 +1,0 @@
----
-layout: default
-href: https://www.airbnb.com
-img: airbnb.svg
-alt: Airbnb
-
----

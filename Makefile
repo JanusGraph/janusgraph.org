@@ -18,7 +18,7 @@ ifeq ($(VERBOSE),1)
 endif
 
 .PHONY default:
-	$(VERB) echo "Available targets: install, serve"
+	$(VERB) echo "Available targets: install, serve, docker-build, preview-via-github"
 
 # Pushes the current branch, provided via $(git rev-parse ...) to the `gh-pages`
 # branch on your repo. Assumes this branch is set to display a preview via
@@ -32,3 +32,13 @@ install:
 
 serve:
 	$(VERB) bundle exec jekyll serve
+
+# Builds the site with the same container image GitHub Pages uses, so the local
+# result matches production. Output goes to ./_site.
+docker-build:
+	$(VERB) docker run --rm --platform linux/amd64 \
+		-v "$(CURDIR)":/github/workspace -w /github/workspace \
+		-e GITHUB_WORKSPACE=/github/workspace \
+		-e INPUT_SOURCE=. -e INPUT_DESTINATION=./_site \
+		-e INPUT_FUTURE=false -e INPUT_BUILD_REVISION= -e INPUT_VERBOSE=false -e INPUT_TOKEN= \
+		ghcr.io/actions/jekyll-build-pages:v1.0.13

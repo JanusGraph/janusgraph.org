@@ -1,0 +1,19 @@
+{% assign eventsCount = site.upcoming_events | size %}
+{% if eventsCount > 0 %}
+<section class="section" id="events" aria-labelledby="events-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Mark your calendar</p>
+      <h2 id="events-title">Upcoming events</h2>
+    </div>
+    <ul class="event-list reveal">
+      {% for event in site.upcoming_events %}
+      <li class="card event">
+        <span class="event-icon">{% include icon.html name="calendar" %}</span>
+        <div>{{ event }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

@@ -1,50 +1,57 @@
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <p class="footer-info">Join our <a href="https://lists.lfaidata.foundation/g/janusgraph-users/topics">community channels</a> for troubleshooting help or questions about installation, configuration, and usage of JanusGraph.</p>
-                        <p class="footer-info">Join <a href="https://groups.google.com/forum/#!forum/gremlin-users">Gremlin users group</a> for questions regarding the Gremlin graph traversal language in general.</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>{{ site.footer.social }}</h3>
-                        <ul class="list-inline">
-                            {% for network in site.social %}
-                            <li>
-                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="{{ network.icon }}"></i></a>
-                            </li>
-		                    {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <a href="https://docs.janusgraph.org" class="btn-footer btn btn-lg btn-outline">
-                            <i class="fas fa-book"></i>&nbsp; See Documentation
-                        </a>
-                        <p class="footer-small-info">For discussion on internal implementation details of JanusGraph or proposing a major new feature or subproject use the <a href="https://lists.lfaidata.foundation/g/janusgraph-dev/topics">JanusGraph dev group</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; 2017-2026 JanusGraph Authors. All rights reserved.<br>
-                        <a href="https://www.linuxfoundation.org">The Linux Foundation</a> has registered trademarks and uses trademarks.
-                        For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage">Trademark Usage</a> page.<br>
-                        Apache®, Apache Hadoop, Hadoop®, Apache Spark, Apache Giraph, Apache Solr, Apache TinkerPop,
-                        and Apache Lucene® are either registered trademarks or trademarks of the
-                        <a href="https://www.apache.org">Apache Software Foundation</a> in the United States and/or other countries.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a id="page-top-button" class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="JanusGraph – back to top">
+          {% include logomark.svg %}
+          <span class="brand-name">JanusGraph</span>
         </a>
+        <p>{{ site.tagline }}.</p>
+        <ul class="social-list" aria-label="Social links">
+          {% for network in site.social %}
+          <li><a href="{{ network.url }}" aria-label="{{ network.name }}" title="{{ network.name }}">{% include icon.html name=network.icon %}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-label="Project">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="{{ site.project.docs }}">Documentation</a></li>
+          <li><a href="{{ site.project.getting_started }}">Getting started</a></li>
+          <li><a href="{{ site.project.releases }}">Releases</a></li>
+          <li><a href="{{ site.project.changelog }}">Changelog</a></li>
+          <li><a href="{{ site.project.repo_url }}">Source code</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Community">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="https://discord.gg/5n4fjv4QAf">Discord</a></li>
+          <li><a href="{{ site.project.users_list }}">Users mailing list</a></li>
+          <li><a href="{{ site.project.dev_list }}">Developers mailing list</a></li>
+          <li><a href="https://stackoverflow.com/questions/tagged/janusgraph">Stack Overflow</a></li>
+          <li><a href="{{ site.project.gremlin_users }}">Gremlin users group</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Foundation">
+        <h4>Foundation</h4>
+        <ul>
+          <li><a href="{{ site.project.lf_project }}">JanusGraph at LF AI &amp; Data</a></li>
+          <li><a href="https://www.linuxfoundation.org">The Linux Foundation</a></li>
+          <li><a href="{{ site.project.donate }}">Donate</a></li>
+          <li><a href="https://github.com/JanusGraph/janusgraph/blob/master/CONTRIBUTING.md">Contributing</a></li>
+          <li><a href="https://github.com/JanusGraph/janusgraph.org">Edit this site</a></li>
+        </ul>
+      </nav>
     </div>
+
+    <div class="footer-legal">
+      <p>Copyright &copy; 2017–{{ site.time | date: "%Y" }} JanusGraph Authors. All rights reserved.</p>
+      <p><a href="https://www.linuxfoundation.org">The Linux Foundation</a> has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage">Trademark Usage</a> page.</p>
+      <p>Apache®, Apache Hadoop, Hadoop®, Apache Spark, Apache Giraph, Apache Solr, Apache TinkerPop, and Apache Lucene® are either registered trademarks or trademarks of the <a href="https://www.apache.org">Apache Software Foundation</a> in the United States and/or other countries.</p>
+    </div>
+  </div>
+</footer>

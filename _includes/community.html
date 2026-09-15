@@ -1,0 +1,61 @@
+<section class="section" id="community" aria-labelledby="community-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Community</p>
+      <h2 id="community-title">Join the JanusGraph community</h2>
+      <p class="lede">Get help with installation, configuration and usage, follow the project, or dive into the internals with the people who build it.</p>
+    </div>
+
+    <div class="grid community-grid reveal">
+      <a class="card community" href="https://discord.gg/5n4fjv4QAf">
+        <span class="community-icon">{% include icon.html name="discord" %}</span>
+        <h3>Discord</h3>
+        <p>Chat with users and maintainers in real time.</p>
+        <span class="card-link">Join the server {% include icon.html name="arrow-right" %}</span>
+      </a>
+      <a class="card community" href="{{ site.project.users_list }}">
+        <span class="community-icon">{% include icon.html name="mail" %}</span>
+        <h3>janusgraph-users</h3>
+        <p>The mailing list for troubleshooting help and questions about running JanusGraph.</p>
+        <span class="card-link">Browse the list {% include icon.html name="arrow-right" %}</span>
+      </a>
+      <a class="card community" href="{{ site.project.dev_list }}">
+        <span class="community-icon">{% include icon.html name="branch" %}</span>
+        <h3>janusgraph-dev</h3>
+        <p>Discuss internal implementation details or propose a major new feature or subproject.</p>
+        <span class="card-link">Browse the list {% include icon.html name="arrow-right" %}</span>
+      </a>
+      <a class="card community" href="https://stackoverflow.com/questions/tagged/janusgraph">
+        <span class="community-icon">{% include icon.html name="stackoverflow" %}</span>
+        <h3>Stack Overflow</h3>
+        <p>Search answers or ask a question tagged <code>janusgraph</code>.</p>
+        <span class="card-link">View questions {% include icon.html name="arrow-right" %}</span>
+      </a>
+      <a class="card community" href="{{ site.project.gremlin_users }}">
+        <span class="community-icon">{% include icon.html name="chat" %}</span>
+        <h3>Gremlin users</h3>
+        <p>Questions about the Gremlin graph traversal language in general.</p>
+        <span class="card-link">Visit the group {% include icon.html name="arrow-right" %}</span>
+      </a>
+      <a class="card community" href="{{ site.project.repo_url }}">
+        <span class="community-icon">{% include icon.html name="github" %}</span>
+        <h3>GitHub</h3>
+        <p>Source code, issues, releases and contribution guidelines.</p>
+        <span class="card-link">Open the repository {% include icon.html name="arrow-right" %}</span>
+      </a>
+    </div>
+
+    <div class="donate-banner reveal">
+      <div class="donate-copy">
+        <span class="donate-icon">{% include icon.html name="heart" %}</span>
+        <div>
+          <h3>Support JanusGraph</h3>
+          <p>JanusGraph is built and maintained by its community. Donations through the Linux Foundation help sustain the project.</p>
+        </div>
+      </div>
+      <a class="btn btn-light btn-lg" href="{{ site.project.donate }}">
+        <span>Donate</span>{% include icon.html name="arrow-right" %}
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+# Organizations that have deployed JanusGraph in production.
+# Newest additions first. Logos live in img/logos/ (SVG preferred, PNG accepted).
+# To add a user: drop the logo into img/logos/ and add an entry here.
+- name: Airbnb
+  url: https://www.airbnb.com
+  logo: airbnb.svg
+- name: Mapped
+  url: https://www.mapped.com
+  logo: mapped.svg
+- name: eBay
+  url: https://www.ebay.com
+  logo: ebay.png
+- name: Credit Agricole CIB
+  url: https://www.ca-cib.com
+  logo: credit_agricole.png
+- name: Celum
+  url: https://www.celum.com
+  logo: celum.png
+- name: Compose
+  url: https://www.compose.com
+  logo: compose.png
+- name: FiNC
+  url: https://finc.com
+  logo: finc.png
+- name: G DATA
+  url: https://gdatasoftware.com
+  logo: gdata.png
+- name: Qihoo 360
+  url: https://www.360.cn
+  logo: qihoo_360.png
+- name: Red Hat
+  url: https://www.redhat.com
+  logo: redhat.png
+- name: Target
+  url: https://www.target.com
+  logo: target.png
+- name: Times Internet
+  url: https://www.timesinternet.in
+  logo: timesinternet.png

@@ -1,7 +1,0 @@
----
-layout: default
-href: https://www.celum.com
-img: celum.png
-alt: Celum
-
----
