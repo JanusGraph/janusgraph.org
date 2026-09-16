@@ -141,7 +141,7 @@
         }
       });
     }
-    var desktop = w.matchMedia('(min-width: 1024px)');
+    var desktop = w.matchMedia('(min-width: 1200px)');
     var onDesktop = function (e) { if (e.matches) setNav(false); };
     if (desktop.addEventListener) desktop.addEventListener('change', onDesktop);
     else if (desktop.addListener) desktop.addListener(onDesktop);
@@ -193,7 +193,8 @@
       if (!r || typeof r.stars !== 'number') return;
       d.querySelectorAll('[data-stars]').forEach(function (el) {
         el.textContent = compact(r.stars);
-        el.hidden = false;
+        var item = el.closest('[data-stars-item]');
+        if (item) item.hidden = false;
       });
     });
 
