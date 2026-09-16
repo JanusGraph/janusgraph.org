@@ -142,10 +142,12 @@
       });
     }
     /* The full-nav breakpoint lives only in the stylesheet: when CSS hides the toggle,
-       the desktop nav is showing. Read that state rather than repeating the pixel value. */
-    function isDesktopNav() {
+       the desktop nav is showing. Read that state rather than repeating the pixel value.
+       (`toggle` is non-null here: this whole block runs under `if (toggle)`.) The check is
+       cheap: on resize it only reads a computed style while the mobile panel is open. */
+    var isDesktopNav = function () {
       return getComputedStyle(toggle).display === 'none';
-    }
+    };
     w.addEventListener('resize', function () {
       if (root.classList.contains('nav-open') && isDesktopNav()) setNav(false);
     });
