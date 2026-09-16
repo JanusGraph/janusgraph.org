@@ -298,6 +298,7 @@ code {
 .chip .icon { width: 1em; height: 1em; color: var(--brand); }
 .chip strong { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
 .chip strong:empty { display: none; }
+.hero-meta li[hidden] { display: none; }
 a.chip-link { transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease; }
 a.chip-link:hover { text-decoration: none; border-color: var(--brand); color: var(--brand-strong); background: var(--brand-soft); }
 .chip-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 3px var(--brand-soft); }
@@ -329,15 +330,18 @@ a.chip-link:hover { text-decoration: none; border-color: var(--brand); color: va
   letter-spacing: -0.02em;
 }
 .brand:hover { text-decoration: none; }
-.brand .logo-mark { width: 34px; height: 34px; }
+/* The brand is the only header item that could shrink, so pin it: a squeezed header must
+   overflow visibly rather than collapse the logo. */
+.brand { flex: none; }
+.brand .logo-mark { flex: none; width: 34px; height: 34px; max-width: none; }
 .logo-accent { fill: var(--logo-accent); }
 .logo-ink { fill: currentColor; }
 
-.site-nav { display: flex; align-items: center; gap: 1.5rem; margin-left: auto; margin-right: 0.75rem; }
-.nav-links { display: flex; align-items: center; gap: 0.15rem; }
+.site-nav { display: flex; align-items: center; gap: 1.25rem; margin-left: auto; margin-right: 0.5rem; }
+.nav-links { display: flex; align-items: center; gap: 0; }
 .nav-links a {
   display: inline-block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.6rem;
   border-radius: 8px;
   color: var(--ink-2);
   font-weight: 500;
@@ -346,17 +350,6 @@ a.chip-link:hover { text-decoration: none; border-color: var(--brand); color: va
 }
 .nav-links a:hover { color: var(--ink); background: var(--brand-soft); text-decoration: none; }
 .nav-actions { display: flex; align-items: center; gap: 0.5rem; }
-
-.gh-stars {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 0.1rem;
-  padding-left: 0.6rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.28);
-  font-variant-numeric: tabular-nums;
-  font-weight: 600;
-}
-.gh-stars[hidden] { display: none; }
 
 .nav-toggle {
   display: none;
@@ -437,7 +430,8 @@ html[data-theme="dark"] .theme-toggle .icon-dark { display: block; }
 .theme-options button[aria-checked="true"] { color: var(--ink); font-weight: 600; }
 .theme-options button[aria-checked="true"] .icon-check { visibility: visible; }
 
-@media (max-width: 1023px) {
+/* Below 1200px the full nav no longer fits beside the brand and header tools. */
+@media (max-width: 1199px) {
   .nav-toggle { display: inline-flex; margin-left: 0; }
   .header-tools { margin-left: auto; }
   .site-nav {

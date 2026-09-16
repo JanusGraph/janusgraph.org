@@ -39,6 +39,9 @@
             <span>Latest release</span><strong data-release-tag></strong>
           </a>
         </li>
+        <li data-stars-item hidden>
+          <a class="chip chip-link" href="{{ site.project.repo_url }}">{% include icon.html name="star" %}<strong data-stars></strong><span>stars on GitHub</span></a>
+        </li>
         <li><span class="chip">{% include icon.html name="award" %}Apache 2.0 license</span></li>
         <li><a class="chip chip-link" href="{{ site.project.lf_project }}">{% include icon.html name="layers" %}A Linux Foundation project</a></li>
       </ul>
