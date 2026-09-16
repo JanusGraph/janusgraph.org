@@ -141,10 +141,14 @@
         }
       });
     }
-    var desktop = w.matchMedia('(min-width: 1200px)');
-    var onDesktop = function (e) { if (e.matches) setNav(false); };
-    if (desktop.addEventListener) desktop.addEventListener('change', onDesktop);
-    else if (desktop.addListener) desktop.addListener(onDesktop);
+    /* The full-nav breakpoint lives only in the stylesheet: when CSS hides the toggle,
+       the desktop nav is showing. Read that state rather than repeating the pixel value. */
+    function isDesktopNav() {
+      return getComputedStyle(toggle).display === 'none';
+    }
+    w.addEventListener('resize', function () {
+      if (root.classList.contains('nav-open') && isDesktopNav()) setNav(false);
+    });
   }
 
   /* Reveal sections as they scroll into view */
@@ -193,6 +197,7 @@
       if (!r || typeof r.stars !== 'number') return;
       d.querySelectorAll('[data-stars]').forEach(function (el) {
         el.textContent = compact(r.stars);
+        el.hidden = false;
         var item = el.closest('[data-stars-item]');
         if (item) item.hidden = false;
       });
